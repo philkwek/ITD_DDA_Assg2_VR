@@ -986,3 +986,19 @@ Received Import Request.
 Start importing Assets/BOXOPHOBIC/Skybox Cubemap Extended/Core/Shaders/Skybox_Cubemap Extended.mat using Guid(7c93ab831004c47a882e4064bafa0ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95b534f016db27084ac52eb63fd42e80') in 0.045406 seconds 
   Import took 0.072550 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 136.551684 seconds.
+  path: Assets/Materials/InvisibleWall.mat
+  artifactKey: Guid(8399e3a78148c48a6b65e745dd731620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/InvisibleWall.mat using Guid(8399e3a78148c48a6b65e745dd731620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898341cb8ee353d495e55690d3286d53') in 0.021463 seconds 
+  Import took 0.032122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 95.398875 seconds.
+  path: Assets/Materials/InvisibleWall.mat
+  artifactKey: Guid(8399e3a78148c48a6b65e745dd731620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/InvisibleWall.mat using Guid(8399e3a78148c48a6b65e745dd731620) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d6e53c29c5b71ba94b2d1d45bad255') in 0.013649 seconds 
+  Import took 0.016998 seconds .
+
