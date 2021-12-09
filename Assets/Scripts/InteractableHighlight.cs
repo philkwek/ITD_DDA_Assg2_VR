@@ -20,6 +20,14 @@ public class InteractableHighlight : MonoBehaviour
     // Update is called once per frame
     public void ExitHover()
     {
-        
+        //get all MeshRenderers and store them
+        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
+
+        //Look through all MeshRenderers and turn off emission property
+        foreach (MeshRenderer renderer in meshRenderers)
+        {
+            //turn off emission property of each redenrer
+            renderer.material.DisableKeyword("_EMISSION");
+        }
     }
 }
