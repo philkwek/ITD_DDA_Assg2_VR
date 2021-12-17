@@ -9,6 +9,8 @@ TagManager:
   - NonRecyclable
   - MetalSpoon
   - PlasticSpoon
+  - Door
+  - BinCollider
   layers:
   - Default
   - TransparentFX
