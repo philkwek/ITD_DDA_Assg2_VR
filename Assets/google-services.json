@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "171136772904",
+    "firebase_url": "https://itd-dda-assg2-default-rtdb.firebaseio.com",
+    "project_id": "itd-dda-assg2",
+    "storage_bucket": "itd-dda-assg2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171136772904:android:4e6b36d043d5f8d0ac3e1d",
+        "android_client_info": {
+          "package_name": "com.ITD.Assg2VR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171136772904-5sj1kno0g28nkrv5vg5g1akcn39i2f1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkTXKpk0gNvCdAvMG9FYa8Qx0657jPXcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171136772904-5sj1kno0g28nkrv5vg5g1akcn39i2f1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
