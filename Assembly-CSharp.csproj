@@ -107,6 +107,7 @@
     <None Include="Assets/Firebase/Plugins/Firebase.Platform.dll" />
     <None Include="Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+    <None Include="Assets/Fonts/Roboto(2)/LICENSE.txt" />
     <None Include="Assets/Firebase/m2repository/com/google/firebase/firebase-database-unity/maven-metadata.xml" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
     <None Include="Assets/Firebase/Plugins/Google.MiniJson.dll" />
