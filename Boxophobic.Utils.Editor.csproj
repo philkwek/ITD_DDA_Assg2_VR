@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CC365FF1-52CD-13E3-E9E1-0D2BC4152610}</ProjectGuid>
+    <ProjectGuid>{EF8A61F0-FC47-E15E-5BF7-B9458EFD3997}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Boxophobic.Utils.Editor</AssemblyName>
@@ -53,43 +53,43 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\SettingsUtils\LoadSettingsData.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledMessageDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledMessageDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledBannerDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledInteractiveDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledTexturePreviewDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledInteractiveDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledIndentDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledEnumDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledMaskDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledToggleDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledPopupLayersDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledIndentDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawInspectorBanner.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\SettingsUtils\SaveSettingsData.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawInspectorCategory.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowBanner.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledSpaceDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureSingleLineDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledButtonDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\Constants\Constants.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledDiffusionMaterialDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMono\StyledMonoBehaviourEditor.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledSpaceDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMono\StyledScriptableObjectEditor.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledCategoryDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledPopupArrayDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledIEnumDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledIMaskDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowCategory.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledTextDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledCategoryDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledButtonDrawer.cs" />
-    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledRangeOptionsDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledBannerDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\SettingsUtils\LoadSettingsData.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledMessageDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledBannerDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledInteractiveDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledMaskDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledToggleDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledIndentDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledTextureDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawInspectorBanner.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\SettingsUtils\SaveSettingsData.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowBanner.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledSpaceDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMono\StyledMonoBehaviourEditor.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMono\StyledScriptableObjectEditor.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledPopupArrayDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledIMaskDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledGUI\DrawWindowCategory.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledButtonDrawer.cs" />
+    <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledInspector\StyledRangeOptionsDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledOptionsSliderDrawer.cs" />
     <Compile Include="Assets\BOXOPHOBIC\Utils\Editor\StyledMaterial\StyledRemapSliderDrawer.cs" />
   </ItemGroup>
@@ -325,6 +325,9 @@
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -393,6 +396,12 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -757,7 +766,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{4320D9C7-8E55-8A1E-D56F-C0489D6795EA}</Project>
+      <Project>{96C55F5A-4CAE-3E00-B5ED-CF4F05312C7D}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
   </ItemGroup>
