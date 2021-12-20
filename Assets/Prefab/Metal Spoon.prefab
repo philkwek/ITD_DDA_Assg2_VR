@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5262964372180721685}
   - component: {fileID: 5734733199696280394}
   - component: {fileID: -1927753926542617381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Metal Spoon
   m_TagString: Recyclable
   m_Icon: {fileID: 0}

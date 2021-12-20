@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6690924438204685116}
   - component: {fileID: 3352662444506745024}
   - component: {fileID: 7015785551621426919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: polySurface4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 2089810553704651406}
   - component: {fileID: 5548199731126631362}
   - component: {fileID: 480948057786375419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: polySurface5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 7505677979667518814}
   - component: {fileID: 5804249214699364008}
   - component: {fileID: -2478951797213374155}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plastic Bottle Empty
   m_TagString: Recyclable
   m_Icon: {fileID: 0}
