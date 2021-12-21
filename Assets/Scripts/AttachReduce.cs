@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class AttachReduce : MonoBehaviour
 {
-    public GameObject metalPanel;
-    public GameObject plasticPanel;
+    public GameObject metalBoard;
+    public GameObject plasticBoard;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "MetalSpoon")
         {
             //Do something
-            metalPanel.SetActive(true);
+            metalBoard.SetActive(true);
         }
 
         if (other.tag == "PlasticSpoon")
         {
-            plasticPanel.SetActive(true);
+            plasticBoard.SetActive(true);
         }
     }
 
@@ -26,13 +26,13 @@ public class AttachReduce : MonoBehaviour
         if (other.tag == "MetalSpoon")
         {
             //Do something
-            metalPanel.SetActive(false);
+            metalBoard.SetActive(false);
         }
 
         if (other.tag == "PlasticSpoon")
         {
             //Do something
-            plasticPanel.SetActive(false);
+            plasticBoard.SetActive(false);
         }
     }
 }

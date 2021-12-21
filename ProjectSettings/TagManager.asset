@@ -11,6 +11,8 @@ TagManager:
   - PlasticSpoon
   - Door
   - BinCollider
+  - PlasticBoard
+  - MetalBoard
   layers:
   - Default
   - TransparentFX
