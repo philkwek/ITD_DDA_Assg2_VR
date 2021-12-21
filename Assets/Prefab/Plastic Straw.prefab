@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4371600688724604578}
   - component: {fileID: 1757031435243161488}
   - component: {fileID: 3864827819517929297}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plastic Straw
   m_TagString: NonRecyclable
   m_Icon: {fileID: 0}

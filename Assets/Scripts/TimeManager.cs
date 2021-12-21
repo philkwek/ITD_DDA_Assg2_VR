@@ -17,7 +17,8 @@ public class TimeManager : MonoBehaviour
 
     private float currentSec;
     private float timeLimit = 0;
-    public bool isDead;
+
+    public static bool gameEnd = false;
 
     private string resetText = "00:00:00";
 
@@ -38,6 +39,7 @@ public class TimeManager : MonoBehaviour
                 timeRemaining = 0;
                 time = timeLimit;
                 timeRemainingDisplay.color = Color.red;
+                gameEnd = true;
             }
             yield return null;
         }
@@ -60,9 +62,6 @@ public class TimeManager : MonoBehaviour
         Debug.Log("msec... " + msec);
         timeRemainingDisplay.text = string.Format("{0:00}:{1:00}:{2:00}", min, sec, msec);
 
-        Debug.LogFormat("Time {0}/// {1}: {2}", time, (int)time, timeLimit);
-
-        
         msec = Mathf.FloorToInt((time - (int)time) * 100);
         sec = Mathf.FloorToInt(time % 60);
         min = Mathf.FloorToInt(time / 60);
@@ -72,13 +71,14 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        StartTimer();
+
     }
 
     public void StartTimer()
     {
         //startButton.enabled = false;
         StartCoroutine("StopWatch");
+        gameEnd = false;
     }
 
 
@@ -102,5 +102,12 @@ public class TimeManager : MonoBehaviour
     public float GetCurrentSec()
     {
         return currentSec;
+    }
+
+    public void ResetTimer()
+    {
+        timeRemaining = 20;
+        timeRemainingDisplay.color = Color.white;
+        StartTimer();
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3073334736832734905}
   - component: {fileID: -7953439263041914705}
   - component: {fileID: 8957872346568885424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plastic Spoon
   m_TagString: NonRecyclable
   m_Icon: {fileID: 0}

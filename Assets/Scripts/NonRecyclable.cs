@@ -5,25 +5,16 @@ using UnityEngine;
 public class NonRecyclable : MonoBehaviour
 {
     public List<GameObject> note;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Animator plusTime;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "NonRecyclable")
         {
             //Do something
+            plusTime.SetTrigger("PlusTime");
             TimeManager.timeRemaining += 5;
+            RecycleGame.score += 1;
         }
         else if (other.tag == "Recyclable")
         {

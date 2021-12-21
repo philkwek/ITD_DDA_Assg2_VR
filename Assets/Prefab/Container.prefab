@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2235372140899226606}
   - component: {fileID: -31891399125537135}
   - component: {fileID: 1512543764688879218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Container
   m_TagString: NonRecyclable
   m_Icon: {fileID: 0}
