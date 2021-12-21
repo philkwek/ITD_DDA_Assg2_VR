@@ -6,6 +6,7 @@ public class AttachReduce : MonoBehaviour
 {
     public GameObject metalBoard;
     public GameObject plasticBoard;
+    public GameObject spoonMountain;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,11 +14,12 @@ public class AttachReduce : MonoBehaviour
         {
             //Do something
             metalBoard.SetActive(true);
+            spoonMountain.SetActive(true);
         }
-
-        if (other.tag == "PlasticSpoon")
+        else if (other.tag == "PlasticSpoon")
         {
             plasticBoard.SetActive(true);
+            spoonMountain.SetActive(true);
         }
     }
 
@@ -27,12 +29,14 @@ public class AttachReduce : MonoBehaviour
         {
             //Do something
             metalBoard.SetActive(false);
+            spoonMountain.SetActive(false);
         }
 
-        if (other.tag == "PlasticSpoon")
+        else if (other.tag == "PlasticSpoon")
         {
             //Do something
             plasticBoard.SetActive(false);
+            spoonMountain.SetActive(false);
         }
     }
 }

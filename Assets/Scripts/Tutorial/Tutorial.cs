@@ -29,7 +29,7 @@ public class Tutorial : MonoBehaviour
         {
             //Do something
             Debug.Log("Collide Door..");
-            SceneManager.LoadScene("Attach (Reduce)");
+            SceneManager.LoadScene("Reduce");
         }
     }
 }
