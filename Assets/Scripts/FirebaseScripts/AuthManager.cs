@@ -110,7 +110,7 @@ public class AuthManager : MonoBehaviour
                 accountKey = newUser.UserId;
 
                 //Login is success, load next scene
-                 
+                Debug.Log("User logged in Succesfully!");
             }
 
         });
@@ -133,5 +133,7 @@ public class AuthManager : MonoBehaviour
         databaseRef.Child("playerGameData").Child(userId).SetRawJsonValueAsync(playerGameDataJson);
         databaseRef.Child("playerProfileData").Child(userId).SetRawJsonValueAsync(playerProfileDataJson);
         databaseRef.Child("players").Child(userId).SetRawJsonValueAsync(playerJson);
+
+        Debug.Log("User Data added into DB");
     }
 }
