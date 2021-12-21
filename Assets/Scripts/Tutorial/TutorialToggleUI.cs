@@ -79,7 +79,7 @@ public class TutorialToggleUI : MonoBehaviour
 
         if (checker >= 2)
         {
-            //Change UI if all the elements have been hung on the tree
+            //Change UI if all the elements have been attached
             fixTableTxt.SetActive(false);
             fixBinLidTxt.SetActive(false);
 
