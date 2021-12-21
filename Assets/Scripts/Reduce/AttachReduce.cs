@@ -17,15 +17,16 @@ public class AttachReduce : MonoBehaviour
             //Do something
             metalBoard.SetActive(true);
             spoonMountain.SetActive(true);
-            resultsGood.SetActive(true);
-            resultsBad.SetActive(false);
+            //resultsGood.SetActive(true);
+            //resultsBad.SetActive(false);
+            Debug.Log("Error");
         }
         else if (other.tag == "PlasticSpoon")
         {
             plasticBoard.SetActive(true);
             spoonMountain.SetActive(true);
-            resultsGood.SetActive(false);
-            resultsBad.SetActive(true);
+            //resultsGood.SetActive(false);
+            //resultsBad.SetActive(true);
         }
     }
 
@@ -49,4 +50,5 @@ public class AttachReduce : MonoBehaviour
             resultsBad.SetActive(false);
         }
     }
+
 }

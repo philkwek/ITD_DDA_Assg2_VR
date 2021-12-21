@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ReduceUI : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class ReduceUI : MonoBehaviour
     public GameObject start;
     public GameObject resultsGood;
     public GameObject resultsBad;
+    public GameObject nextReuse;
 
     public AudioSource doneSound;
     // Start is called before the first frame update
@@ -17,6 +19,7 @@ public class ReduceUI : MonoBehaviour
         start.SetActive(false);
         resultsGood.SetActive(false);
         resultsBad.SetActive(false);
+        nextReuse.SetActive(false);
 
         doneSound = GetComponent<AudioSource>();
     }
@@ -27,5 +30,46 @@ public class ReduceUI : MonoBehaviour
         start.SetActive(true);
         resultsGood.SetActive(false);
         resultsBad.SetActive(false);
+        nextReuse.SetActive(false);
+    }
+
+    public void Back()
+    {
+        intro.SetActive(false);
+        start.SetActive(false);
+        resultsGood.SetActive(false);
+        resultsBad.SetActive(false);
+        nextReuse.SetActive(false);
+    }
+
+    public void Next()
+    {
+        intro.SetActive(false);
+        start.SetActive(false);
+        resultsGood.SetActive(false);
+        resultsBad.SetActive(false);
+        nextReuse.SetActive(true);
+    }
+
+    public void ResultGood()
+    {
+        intro.SetActive(false);
+        start.SetActive(false);
+        resultsGood.SetActive(true);
+        resultsBad.SetActive(false);
+        nextReuse.SetActive(false);
+    }
+
+    public void ResultBad()
+    {
+        intro.SetActive(false);
+        start.SetActive(false);
+        resultsGood.SetActive(false);
+        resultsBad.SetActive(true);
+        nextReuse.SetActive(false);
+    }
+    public void GoReuse()
+    {
+        SceneManager.LoadScene("Reuse");
     }
 }
