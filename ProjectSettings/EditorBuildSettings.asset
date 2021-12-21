@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Recycle.unity
     guid: 6a60345bf46d715429ac52047df4f395
+  - enabled: 1
+    path: Assets/Scenes/Attach (Reduce).unity
+    guid: fe43fa4fa8c44b747bca0017b4bf8d88
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 0acf1732f5341ea4ca35ca738acc389b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dd34ba762d9de4c0ea55cd9eeefc4976, type: 2}
