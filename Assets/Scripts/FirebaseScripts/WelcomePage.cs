@@ -6,12 +6,12 @@ using TMPro;
 
 public class WelcomePage : MonoBehaviour
 {
-    public InputField loginEmailInput;
-    public InputField loginPasswordInput;
+    public TMP_InputField loginEmailInput;
+    public TMP_InputField loginPasswordInput;
 
-    public InputField signupEmailInput;
-    public InputField signupPasswordInput;
-    public InputField signupUsernameInput;
+    public TMP_InputField signupEmailInput;
+    public TMP_InputField signupPasswordInput;
+    public TMP_InputField signupUsernameInput;
 
     public AuthManager authManager;
 
