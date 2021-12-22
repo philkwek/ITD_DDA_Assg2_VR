@@ -15,7 +15,9 @@ public class AuthManager : MonoBehaviour
     Firebase.Auth.FirebaseUser user;
     DatabaseReference databaseRef;
 
-    public static string accountKey; 
+    public static string accountKey;
+    public MenuManager menuManager;
+    public RealtimeDbManager realtimedbManager;
 
     private void Awake()
     {
@@ -39,7 +41,7 @@ public class AuthManager : MonoBehaviour
     {
         Debug.Log("Email: " + email + " Password: " + password);
 
-        auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(task => {
+        auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
             if (task.IsCanceled)
             {
                 Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
@@ -66,7 +68,7 @@ public class AuthManager : MonoBehaviour
 
     public void LoginUser(string email, string password)
     {
-        auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task => {
+        auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
             if (task.IsCanceled)
             {
                 Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
@@ -111,6 +113,8 @@ public class AuthManager : MonoBehaviour
 
                 //Login is success, load next scene
                 Debug.Log("User logged in Succesfully!");
+                menuManager.OpenHomeMenu(); // opens home menu
+                realtimedbManager.InsertUsername();
             }
 
         });

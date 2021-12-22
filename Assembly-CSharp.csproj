@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7C15B4A4-0D14-30D8-0663-ADB193833F2F}</ProjectGuid>
+    <ProjectGuid>{B6D5A9F7-E7B5-0489-69BD-23708457CDAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -79,6 +79,8 @@
     <Compile Include="Assets/Scripts/Reuse/ToggleUI.cs" />
     <Compile Include="Assets/Scripts/FirebaseScripts/Obj/WeeklyActive.cs" />
     <Compile Include="Assets/Scripts/TimeManager.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/MenuManager.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_5_0.dll" />
@@ -831,15 +833,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{0A5A2E17-2AA0-1692-1602-0AC255A4D513}</Project>
+      <Project>{EF8A61F0-FC47-E15E-5BF7-B9458EFD3997}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{5983A0B2-C399-70A3-2830-AE674AB67F48}</Project>
+      <Project>{096E67FD-36CD-FF8E-D59C-9DE968562C06}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{86F83A8B-9EE1-3707-D6D2-9D1320D186D3}</Project>
+      <Project>{96C55F5A-4CAE-3E00-B5ED-CF4F05312C7D}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
   </ItemGroup>
