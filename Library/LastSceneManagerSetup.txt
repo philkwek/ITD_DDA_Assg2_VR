@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Reduce.unity
+- path: Assets/Scenes/Reuse.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
