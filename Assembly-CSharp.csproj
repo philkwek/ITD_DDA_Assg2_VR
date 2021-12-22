@@ -53,32 +53,26 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/Reuse/ReuseAccomplished.cs" />
     <Compile Include="Assets/Scripts/NonRecyclable.cs" />
-    <Compile Include="Assets/Scripts/LightSwitch.cs" />
     <Compile Include="Assets/Scripts/Reduce/AttachReduce.cs" />
     <Compile Include="Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs" />
+    <Compile Include="Assets/Scripts/Tutorial/Sounds.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/Player.cs" />
     <Compile Include="Assets/Scripts/Tutorial/TutorialToggleUI.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/PlayerGameData.cs" />
     <Compile Include="Assets/Scripts/Recyclable.cs" />
+    <Compile Include="Assets/Scripts/Reduce/ReduceUI.cs" />
     <Compile Include="Assets/Scripts/RecycleGame.cs" />
     <Compile Include="Assets/Scripts/Tutorial/Tutorial.cs" />
-    <Compile Include="Assets/Scripts/SignUp.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/AuthManager.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/WelcomePage.cs" />
     <Compile Include="Assets/Scripts/RecycleInstruction.cs" />
     <Compile Include="Assets/Scripts/Drop.cs" />
-    <Compile Include="Assets/Scripts/InteractableHighlight.cs" />
-    <Compile Include="Assets/Scripts/ButtonTrigger.cs" />
-    <Compile Include="Assets/Scripts/Reuse/ToggleUI.cs" />
-    <Compile Include="Assets/Scripts/TimeManager.cs" />
-    <Compile Include="Assets/Scripts/FirebaseScripts/AuthManager.cs" />
-    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/Player.cs" />
-    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/PlayerGameData.cs" />
     <Compile Include="Assets/Scripts/FirebaseScripts/Obj/PlayerProfileData.cs" />
-    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" />
-    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/WeeklyActive.cs" />
     <Compile Include="Assets/Scripts/FirebaseScripts/Obj/MinigameStats.cs" />
-    <Compile Include="Assets/Scripts/FirebaseScripts/WelcomePage.cs" />
-    <Compile Include="Assets/Scripts/Reduce/ReduceUI.cs" />
-    <Compile Include="Assets/Scripts/Tutorial/Sounds.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/WeeklyActive.cs" />
+    <Compile Include="Assets/Scripts/TimeManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_5_0.dll" />

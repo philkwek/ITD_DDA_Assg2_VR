@@ -4,6 +4,7 @@ public class PlayerProfileData
     public int noOfMinigamesCompleted;
     public int noOfTaskCompleted;
     public float totalTimePlayed;
+    public string username;
 
     public PlayerProfileData(int completion, int noOfMinigamesCompleted, int noOfTaskCompleted, float totalTimePlayed, string username)
     {

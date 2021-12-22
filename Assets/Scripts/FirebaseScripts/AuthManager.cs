@@ -122,7 +122,7 @@ public class AuthManager : MonoBehaviour
         Player player = new Player(false, email, userId, username);
         PlayerProfileData playerProfileData = new PlayerProfileData(0, 0, 0, 0, username);
         MinigameStats minigameStats = new MinigameStats("0", 0, 0, 0, 0, 0, 0);
-        PlayerGameData playerGameData = new PlayerGameData(minigameStats, 0, 0);
+        PlayerGameData playerGameData = new PlayerGameData(minigameStats, 0, 0, username);
 
         //convert data into json
         string playerJson = JsonUtility.ToJson(player);
