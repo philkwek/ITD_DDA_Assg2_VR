@@ -19,7 +19,7 @@ public class AttachReduce : MonoBehaviour
             spoonMountain.SetActive(true);
             //resultsGood.SetActive(true);
             //resultsBad.SetActive(false);
-            Debug.Log("Error");
+            
         }
         else if (other.tag == "PlasticSpoon")
         {
@@ -39,6 +39,7 @@ public class AttachReduce : MonoBehaviour
             spoonMountain.SetActive(false);
             resultsGood.SetActive(false);
             resultsBad.SetActive(false);
+            Debug.Log("Error123");
         }
 
         else if (other.tag == "PlasticSpoon")
