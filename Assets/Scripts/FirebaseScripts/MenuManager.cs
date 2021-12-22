@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    
     public GameObject loginPage;
     public GameObject homePage;
 
@@ -30,6 +29,42 @@ public class MenuManager : MonoBehaviour
     {
         loginPage.SetActive(false);
         homePage.SetActive(true);
+    }
+
+    public void OpenLoginSignupMenu()
+    {
+        loginPage.SetActive(true);
+        homePage.SetActive(false);
+    }
+
+    public void StartExperience()
+    {
+        SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
+    }
+
+    public void OpenReduceGame()
+    {
+        SceneManager.LoadScene("Reduce", LoadSceneMode.Single);
+    }
+
+    public void OpenReuseGame()
+    {
+        SceneManager.LoadScene("Reuse", LoadSceneMode.Single);
+    }
+
+    public void OpenRecycleGame()
+    {
+        SceneManager.LoadScene("Recycle", LoadSceneMode.Single);
+    }
+
+    public void OpenTutorial()
+    {
+        SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
+    }
+
+    public void OpenMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
 

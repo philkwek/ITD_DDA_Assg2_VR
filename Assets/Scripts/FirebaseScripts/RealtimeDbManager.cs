@@ -13,6 +13,8 @@ public class RealtimeDbManager : MonoBehaviour
     Firebase.Auth.FirebaseUser user;
     DatabaseReference databaseRef;
 
+    public TextMeshProUGUI accountNameUI;
+
     private void Awake()
     {
         auth = FirebaseAuth.DefaultInstance;
@@ -53,12 +55,12 @@ public class RealtimeDbManager : MonoBehaviour
             if (ds.Exists)
             {
                 Debug.Log("Player found...");
-                Debug.Log(ds);
 
                 foreach (DataSnapshot snap in ds.Children)
                 {
-                    Player playerDetails = JsonUtility.FromJson<Player>(snap.GetRawJsonValue());
-                    Debug.Log(playerDetails);
+                    Player player = JsonUtility.FromJson<Player>(snap.GetRawJsonValue());
+                    Debug.Log(player.username);
+                    accountNameUI.text = "Account: " +  player.username;
                 }
             }
             else

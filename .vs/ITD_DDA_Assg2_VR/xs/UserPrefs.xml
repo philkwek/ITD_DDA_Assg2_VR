@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{B6D5A9F7-E7B5-0489-69BD-23708457CDAE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" Line="6" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" Line="117" Column="52" NotebookId="1" />
       <File FileName="Assets/Scripts/FirebaseScripts/WelcomePage.cs" Line="14" Column="47" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/BtnInteractions.cs" Line="12" Column="17" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="8" Column="27" NotebookId="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/BtnInteractions.cs" Line="32" Column="34" NotebookId="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="60" Column="48" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

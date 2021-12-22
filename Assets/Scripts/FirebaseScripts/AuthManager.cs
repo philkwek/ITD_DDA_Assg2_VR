@@ -28,13 +28,23 @@ public class AuthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (auth.CurrentUser != user)
+        {
+            Debug.Log("User is signed in");
+            AlreadySignIn();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void AlreadySignIn()
+    {
+        menuManager.OpenHomeMenu(); // opens home menu
+        realtimedbManager.InsertUsername();
     }
 
     public void SignUpNewUser(string email, string password, string username)
@@ -118,6 +128,12 @@ public class AuthManager : MonoBehaviour
             }
 
         });
+    }
+
+    public void LogoutUser()
+    {
+        auth.SignOut();
+        menuManager.OpenLoginSignupMenu();
     }
 
     public void CreatePlayerData(string username, string userId, string email)
