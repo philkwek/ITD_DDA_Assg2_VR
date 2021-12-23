@@ -8,7 +8,15 @@ public class Tutorial : MonoBehaviour
     public GameObject door;
     public GameObject throwCongratTxt;
 
+    public GameObject databaseManager;
+
     public TutorialToggleUI tutorialToggleUI;
+
+    private void Start()
+    {
+        //Finds GameManager under DontDestroyOnLoad()
+        databaseManager = GameObject.Find("GameManager");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,6 +36,11 @@ public class Tutorial : MonoBehaviour
         if (gameObject.tag == "Door")
         {
             //Do something
+            int completion = databaseManager.GetComponent<RealtimeDbManager>().completion;
+            if (completion <= 0)
+            {
+                databaseManager.GetComponent<RealtimeDbManager>().completion = 1;
+            };
             Debug.Log("Collide Door..");
             SceneManager.LoadScene("Reduce");
         }
