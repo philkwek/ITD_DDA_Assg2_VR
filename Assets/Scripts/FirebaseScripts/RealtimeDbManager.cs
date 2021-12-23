@@ -8,6 +8,7 @@ using TMPro;
 using Firebase.Extensions;
 using System;
 using System.Globalization;
+using System.Linq;
 
 public class RealtimeDbManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class RealtimeDbManager : MonoBehaviour
     public static RealtimeDbManager instance;
 
     public int weekOfYear;
+    public string dayOfWeek;
+    public string date;
 
     private void Awake()
     {
@@ -39,12 +42,14 @@ public class RealtimeDbManager : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(gameObject);
+
+        Invoke("GoOffline", 10);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //GoOffline();
+        
     }
 
     public void InsertUsername()
@@ -84,7 +89,7 @@ public class RealtimeDbManager : MonoBehaviour
            });
     }
 
-    //function adds user to realtimedb list of currently online users
+    //function adds user to realtimedb list of currently online users, runs once on startup
     public void CurrentlyActive()
     {
         CultureInfo myCI = new CultureInfo("en-US");
@@ -96,8 +101,8 @@ public class RealtimeDbManager : MonoBehaviour
         Debug.Log(weekOfYear);
 
         DateTime dt = System.DateTime.Now;
-        Debug.Log(dt.DayOfWeek);
-        Debug.Log(dt.ToString("yyyy-MM-dd"));
+        dayOfWeek = dt.DayOfWeek.ToString();
+        date = dt.ToString("yyyy-MM-dd");
 
 
         //First, checks if database has current week data
@@ -118,7 +123,6 @@ public class RealtimeDbManager : MonoBehaviour
             DataSnapshot ds = task.Result;
             if (ds.Exists)
             {
-                Debug.Log("Player found...");
                 string[] dayArray = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
                 Weekly weekly = JsonUtility.FromJson<Weekly>(ds.GetRawJsonValue());
                 Debug.Log(weekly.weekNumber);
@@ -139,79 +143,65 @@ public class RealtimeDbManager : MonoBehaviour
                     if (day.Exists)
                     {
                         Day newDay = JsonUtility.FromJson<Day>(day.GetRawJsonValue());
-                        Debug.Log(newDay.currentlyActive[0]);
 
-                        bool firstLogin = true;
-
-                        for (int i = 0; i < newDay.currentlyActive.Length; i++)
+                    if (newDay.currentlyActive != null)
                         {
-                            //checks wasActive list for user to see if this is first login
-                            if (newDay.wasActive[i] == auth.CurrentUser.UserId)
-                            {
-                                firstLogin = false;
-                            }
-                        }
-                        if (firstLogin)
-                        {
-                            //add user to current array for both currently and was
-                            int newLength = newDay.currentlyActive.Length + 1;
-                            string[] currentlyActive = new string[newLength];
-                            string[] wasActive = new string[newLength];
+                            bool firstLogin = true;
 
-                            for (int i = 0; i < newLength; i++)
+                            for (int i = 0; i < newDay.wasActive.Length; i++)
                             {
                                 //checks wasActive list for user to see if this is first login
-                                if (newDay.wasActive[i] != null && newDay.currentlyActive != null)
+                                if (newDay.wasActive[i] == auth.CurrentUser.UserId)
                                 {
-                                    currentlyActive[i] = newDay.currentlyActive[i];
-                                    wasActive[i] = newDay.wasActive[i];
-
-                                } else if (newDay.wasActive[i] != null)
-                                {
-                                    wasActive[i] = newDay.wasActive[i];
-
-                                } else if (newDay.wasActive[i] == null && newDay.currentlyActive == null)
-                                {
-                                    currentlyActive[i] = auth.CurrentUser.UserId;
-                                    wasActive[i] = auth.CurrentUser.UserId;
+                                    firstLogin = false;
                                 }
                             }
-                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("wasActive").SetValueAsync(wasActive);
-                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("currentlyActive").SetValueAsync(currentlyActive);
-                        }
-                        else
-                        {
-                            //add user to current array for both currently and was
-                            int newLength = newDay.currentlyActive.Length + 1;
-                            string[] currentlyActive = new string[newLength];
-                            string[] wasActive = new string[newLength];
 
-                            for (int i = 0; i < newLength; i++)
+                            List<string> currentlyActive = newDay.currentlyActive.ToList();
+                            List<string> wasActive = newDay.wasActive.ToList();
+
+                            currentlyActive.Add(auth.CurrentUser.UserId);
+                            if (firstLogin)
+                            {
+                                wasActive.Add(auth.CurrentUser.UserId);
+                            }
+
+                            string[] currentActiveArray = currentlyActive.ToArray();
+                            string[] wasActiveArray = wasActive.ToArray();
+
+                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("wasActive").SetValueAsync(wasActiveArray);
+                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("currentlyActive").SetValueAsync(currentActiveArray);
+                            Debug.Log("Update success");
+                        } else
+                        {
+                            bool firstLogin = true;
+
+                            for (int i = 0; i < newDay.wasActive.Length; i++)
                             {
                                 //checks wasActive list for user to see if this is first login
-                                if (newDay.wasActive[i] != null && newDay.currentlyActive != null)
+                                if (newDay.wasActive[i] == auth.CurrentUser.UserId)
                                 {
-                                    currentlyActive[i] = newDay.currentlyActive[i];
-                                    wasActive[i] = newDay.wasActive[i];
-
-                                }
-                                else if (newDay.wasActive[i] != null)
-                                {
-                                    wasActive[i] = newDay.wasActive[i];
-
-                                }
-                                else if (newDay.wasActive[i] == null && newDay.currentlyActive == null)
-                                {
-                                    currentlyActive[i] = auth.CurrentUser.UserId;
+                                    firstLogin = false;
                                 }
                             }
-                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("wasActive").SetValueAsync(wasActive);
-                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("currentlyActive").SetValueAsync(currentlyActive);
+
+                            List<string> wasActive = newDay.wasActive.ToList();
+
+
+                            if (firstLogin)
+                            {
+                                wasActive.Add(auth.CurrentUser.UserId);
+                            }
+
+                            string[] currentActiveArray = { auth.CurrentUser.UserId };
+                            string[] wasActiveArray = wasActive.ToArray();
+
+                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("wasActive").SetValueAsync(wasActiveArray);
+                            databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dt.DayOfWeek.ToString()).Child("currentlyActive").SetValueAsync(currentActiveArray);
+                            Debug.Log("Update success");
                         }
 
-
-                        
-                        Debug.Log("Update success");
+                       
                     }
                     else
                     {
@@ -269,10 +259,90 @@ public class RealtimeDbManager : MonoBehaviour
         float timeNow = Time.realtimeSinceStartup;
         float timeMinute = timeNow / 60;
         string twoDP = timeMinute.ToString("F2");
-        Debug.Log(twoDP);
+        float finalTime = float.Parse(twoDP, CultureInfo.InvariantCulture.NumberFormat);
+        Debug.Log(finalTime);
+
+        float currentTotalMin;
+        string currentTime = DateTime.Now.ToString("HH:mm:ss");
+        string dateTitle = date + "T" + currentTime;
+        Debug.Log(dateTitle);
 
         //get current total time spent for the day (min)
-        Query getTime = databaseRef.Child("weeklyActive").OrderByChild("weekNumber").EqualTo(weekOfYear).LimitToFirst(1);
-        //text
+        Query findDay = databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek);
+        findDay.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.Exception != null)
+            {
+                throw task.Exception;
+            }
+
+            if (!task.IsCompleted)
+            {
+                return;
+            }
+
+            DataSnapshot ds = task.Result;
+            if (ds.Exists)
+            {
+                Day newDay = JsonUtility.FromJson<Day>(ds.GetRawJsonValue());
+                currentTotalMin = newDay.totalPlaySession;
+                currentTotalMin += finalTime;
+                databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek).Child("totalPlaySession").SetValueAsync(currentTotalMin);
+                //
+            }
+        });
+
+        Query findPlayerTime = databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId);
+        findPlayerTime.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.Exception != null)
+            {
+                throw task.Exception;
+            }
+
+            if (!task.IsCompleted)
+            {
+                return;
+            }
+
+            DataSnapshot ds = task.Result;
+            if (ds.Exists)
+            {
+                PlayerProfileData profile = JsonUtility.FromJson<PlayerProfileData>(ds.GetRawJsonValue());
+                currentTotalMin = profile.totalTimePlayed;
+                currentTotalMin += finalTime;
+                databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("totalTimePlayed").SetValueAsync(currentTotalMin);
+
+                PlayerSessionTime newSession = new PlayerSessionTime(date, dayOfWeek, currentTime, finalTime, dateTitle);
+                string sessionJson = JsonUtility.ToJson(newSession);
+                databaseRef.Child("playerSessionTime").Child(auth.CurrentUser.UserId).Child(dateTitle).SetRawJsonValueAsync(sessionJson);
+            }
+        });
+
+        //this function takes off user from list of currently active users;
+        Query findDayTime = databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek);
+        findDayTime.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.Exception != null)
+            {
+                throw task.Exception;
+            }
+
+            if (!task.IsCompleted)
+            {
+                return;
+            }
+
+            DataSnapshot ds = task.Result;
+            if (ds.Exists)
+            {
+                Day newDay = JsonUtility.FromJson<Day>(ds.GetRawJsonValue());
+                List<string> currentlyActive = newDay.currentlyActive.ToList();
+                currentlyActive.Remove(auth.CurrentUser.UserId);
+                string[] currentActiveArray = currentlyActive.ToArray();
+                Debug.Log(currentActiveArray);
+                databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek).Child("currentlyActive").SetValueAsync(currentActiveArray);
+            }
+        });
     }
 }

@@ -1,25 +1,16 @@
 ﻿<Properties StartupConfiguration="{B6D5A9F7-E7B5-0489-69BD-23708457CDAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirebaseScripts/Obj/Day.cs">
     <Files>
-      <File FileName="Assets/Scripts/FirebaseScripts/WelcomePage.cs" Line="14" Column="47" />
-      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="30" Column="17" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" />
-      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" Line="156" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/Day.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="189" Column="59" />
+      <File FileName="Assets/Scripts/FirebaseScripts/WelcomePage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" Line="33" Column="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/Obj/Day.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="ITD_DDA_Assg2_VR" expanded="True">
-            <Node name="Assets" expanded="True" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2e9ec069-abc4-4ff2-912c-8b19b82478de" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="23e6d09d-5382-4f53-901e-433b71408459" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
