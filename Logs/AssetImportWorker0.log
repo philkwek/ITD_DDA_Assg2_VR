@@ -242,3 +242,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 808.857996 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(6a31123fd5070524eab056bf8af0b6a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(6a31123fd5070524eab056bf8af0b6a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a681fb99b87a4688811399d14994c180') in 0.045415 seconds 
+  Import took 0.061121 seconds .
+
