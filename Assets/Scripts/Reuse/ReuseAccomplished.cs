@@ -31,8 +31,8 @@ public class ReuseAccomplished : MonoBehaviour
         {
             databaseManager.GetComponent<RealtimeDbManager>().completion = 3;
         }
-        databaseManager.GetComponent<RealtimeDbManager>().noOfCraftsMade += 1;
-        databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
+        databaseManager.GetComponent<RealtimeDbManager>().AddCraftsMade();
+        databaseManager.GetComponent<RealtimeDbManager>().AddTaskCompleted();
 
         instructions.SetActive(false);
         endReuseScene.SetActive(true);

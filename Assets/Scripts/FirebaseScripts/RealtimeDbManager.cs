@@ -455,6 +455,10 @@ public class RealtimeDbManager : MonoBehaviour
         string statsJson = JsonUtility.ToJson(newStats);
         databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId).Child("minigameStats").SetRawJsonValueAsync(statsJson);
 
+        //this functions updates player's profile data
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("completion").SetValueAsync(completion);
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfMinigamesCompleted").SetValueAsync(noOfMinigamesCompleted);
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfTaskCompleted").SetValueAsync(noOfTaskCompleted);
     }
 
     public void GetNoOnline()
