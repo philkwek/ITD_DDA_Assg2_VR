@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseUI;
+    public GameObject pauseBtn;
 
     public void Appear()
     {
@@ -23,13 +24,9 @@ public class PauseMenu : MonoBehaviour
         pauseUI.SetActive(false);
     }
 
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
+
 }

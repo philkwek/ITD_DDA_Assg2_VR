@@ -17,6 +17,7 @@ public class RecycleGame : MonoBehaviour
 
     public GameObject locked;
     public GameObject unlocked;
+    public GameObject lastPanel;
 
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI finalScore;
@@ -121,5 +122,12 @@ public class RecycleGame : MonoBehaviour
     private void UpdateScore()
     {
         scoreTxt.text = "Score: " + score;
+    }
+
+    public void LastPanel()
+    {
+        locked.SetActive(false);
+        unlocked.SetActive(false);
+        lastPanel.SetActive(true);
     }
 }
