@@ -1,18 +1,25 @@
 ﻿<Properties StartupConfiguration="{B6D5A9F7-E7B5-0489-69BD-23708457CDAE}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/FirebaseScripts/WelcomePage.cs" Line="14" Column="47" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/BtnInteractions.cs" Line="44" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="29" Column="27" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/Weekly.cs" Line="21" Column="38" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" Line="156" Column="1" NotebookId="2" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/Day.cs" Line="13" Column="36" NotebookId="2" />
+      <File FileName="Assets/Scripts/FirebaseScripts/WelcomePage.cs" Line="14" Column="47" />
+      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="30" Column="17" />
+      <File FileName="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" />
+      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" Line="156" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/Obj/Day.cs" NotebookId="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ITD_DDA_Assg2_VR" expanded="True">
+            <Node name="Assets" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3d81de2f-490e-4226-a1d7-fc8cccdd719c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2e9ec069-abc4-4ff2-912c-8b19b82478de" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
