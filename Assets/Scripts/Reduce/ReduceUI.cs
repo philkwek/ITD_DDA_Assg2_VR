@@ -1,3 +1,9 @@
+/******************************************************************************
+Author: Kelly, Eileen, Elicia, Phil, Donavan
+Name of Class: Toggle UI
+Description of Class: This script is to toggle the text menu in the reduce scene
+Date Created: 20/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
