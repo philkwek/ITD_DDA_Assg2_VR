@@ -17,10 +17,15 @@ public class ReduceUI : MonoBehaviour
     public GameObject resultsBad;
     public GameObject nextReuse;
 
+    public GameObject databaseManager;
+
     public AudioSource doneSound;
     // Start is called before the first frame update
     void Start()
     {
+        //Finds GameManager under DontDestroyOnLoad()
+        databaseManager = GameObject.Find("GameManager");
+
         intro.SetActive(true);
         start.SetActive(false);
         resultsGood.SetActive(false);
@@ -76,6 +81,12 @@ public class ReduceUI : MonoBehaviour
     }
     public void GoReuse()
     {
+        int completion = databaseManager.GetComponent<RealtimeDbManager>().completion;
+        if (completion <= 1)
+        {
+            databaseManager.GetComponent<RealtimeDbManager>().completion = 2;
+        };
+        databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
         SceneManager.LoadScene("Reuse");
     }
 }
