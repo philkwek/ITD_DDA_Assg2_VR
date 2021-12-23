@@ -39,7 +39,7 @@ public class RecycleGame : MonoBehaviour
     void Start()
     {
         //Finds GameManager under DontDestroyOnLoad()
-        databaseManager = GameObject.Find("GameManager");
+        databaseManager = GameObject.Find("DatabaseManager");
 
         score = 0;
         if (isUnlocked == false)

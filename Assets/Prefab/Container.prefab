@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -2235372140899226606}
   - component: {fileID: -31891399125537135}
   - component: {fileID: 1512543764688879218}
+  - component: {fileID: 3514590235476639655}
   m_Layer: 6
   m_Name: Container
   m_TagString: NonRecyclable
@@ -241,3 +242,16 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
+--- !u!114 &3514590235476639655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4871964429175396772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82ce0034f8b84ea89239fcd121c73a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  databaseManager: {fileID: 0}

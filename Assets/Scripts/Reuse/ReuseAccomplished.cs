@@ -19,7 +19,7 @@ public class ReuseAccomplished : MonoBehaviour
     private void Start()
     {
         //Finds GameManager under DontDestroyOnLoad()
-        databaseManager = GameObject.Find("GameManager");
+        databaseManager = GameObject.Find("DatabaseManager");
     }
 
 

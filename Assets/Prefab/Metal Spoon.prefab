@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -1927753926542617381}
   - component: {fileID: 3337033790666038889}
   - component: {fileID: -8521704741820547187}
+  - component: {fileID: 7029970631981896999}
   m_Layer: 6
   m_Name: Metal Spoon
   m_TagString: Recyclable
@@ -254,3 +255,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7029970631981896999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240292376971997965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82ce0034f8b84ea89239fcd121c73a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  databaseManager: {fileID: 0}

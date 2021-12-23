@@ -87,6 +87,7 @@
     <Compile Include="Assets/Scripts/Recycle/TimeManager.cs" />
     <Compile Include="Assets/Scripts/FirebaseScripts/OnlinePlayersListener.cs" />
     <Compile Include="Assets/Scripts/Recycle/SelfDestruct.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/ObjPickUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_5_0.dll" />
