@@ -100,9 +100,16 @@ public class RecycleGame : MonoBehaviour
         }
 
         //functions to enter new minigame stats into realtimeDbManager
+        int completion = databaseManager.GetComponent<RealtimeDbManager>().completion;
+        if (completion <= 3)
+        { 
+            databaseManager.GetComponent<RealtimeDbManager>().completion = 4;
+        }
         float roundTime = timeManager.GetTimeRecorded();
         int throwStreak = savedStreak;
         databaseManager.GetComponent<RealtimeDbManager>().NewMinigameStats(score, roundTime, throwStreak, score, miss, throws);
+        databaseManager.GetComponent<RealtimeDbManager>().noOfMinigamesCompleted += 1;
+        databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
     }
 
     public void StartGame()

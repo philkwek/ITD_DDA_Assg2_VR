@@ -14,10 +14,26 @@ public class ReuseAccomplished : MonoBehaviour
     public GameObject instructions;
     public GameObject endReuseScene;
 
+    public GameObject databaseManager;
+
+    private void Start()
+    {
+        //Finds GameManager under DontDestroyOnLoad()
+        databaseManager = GameObject.Find("GameManager");
+    }
+
 
     //End Reuse Scene UI displayed
     public void EndReuseScene()
     {
+        int completion = databaseManager.GetComponent<RealtimeDbManager>().completion;
+        if (completion <= 2)
+        {
+            databaseManager.GetComponent<RealtimeDbManager>().completion = 3;
+        }
+        databaseManager.GetComponent<RealtimeDbManager>().noOfCraftsMade += 1;
+        databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
+
         instructions.SetActive(false);
         endReuseScene.SetActive(true);
     }
