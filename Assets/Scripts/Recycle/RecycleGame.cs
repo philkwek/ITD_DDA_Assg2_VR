@@ -20,6 +20,7 @@ public class RecycleGame : MonoBehaviour
 
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI finalScore;
+    public TextMeshProUGUI wrong;
 
     public static int score = 0;
     public static int miss = 0;
@@ -65,7 +66,7 @@ public class RecycleGame : MonoBehaviour
         while (isGameActive && !isOne)
         {
             int index = Random.Range(0, throwables.Count);
-            Instantiate(throwables[index]);
+            Instantiate(throwables[index].AddComponent<SelfDestruct>());
             isOne = true;
             throws += 1;
         }
@@ -73,10 +74,19 @@ public class RecycleGame : MonoBehaviour
 
     public void GameOver()
     {
+        isGameActive = false;
         Time.timeScale = 0;
         gameOver.SetActive(true);
         gameItems.SetActive(false);
         finalScore.text = scoreTxt.text;
+        if (miss == 0)
+        {
+            wrong.text = "* No trash have been place into the wrong bins *";
+        }
+        else
+        {
+            wrong.text = string.Format("* {0} trash had been place into the wrong bins *", miss);
+        }
     }
 
     public void StartGame()
