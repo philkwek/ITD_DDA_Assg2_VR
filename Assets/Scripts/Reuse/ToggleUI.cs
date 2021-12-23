@@ -15,6 +15,7 @@ public class ToggleUI : MonoBehaviour
     public GameObject startText;
     public GameObject instructions;
     public GameObject endReuseScene;
+    public GameObject nextRecycle;
 
     //Clears the UI
     public void ResetUI()
@@ -30,6 +31,7 @@ public class ToggleUI : MonoBehaviour
         startText.SetActive(true);
         instructions.SetActive(false);
         endReuseScene.SetActive(false);
+        nextRecycle.SetActive(false);
     }
 
     //Intructions UI displayed
@@ -38,7 +40,7 @@ public class ToggleUI : MonoBehaviour
         startText.SetActive(false);
         instructions.SetActive(true);
         endReuseScene.SetActive(false);
-
+        nextRecycle.SetActive(false);
     }
 
     //End Reuse Scene UI displayed
@@ -47,6 +49,16 @@ public class ToggleUI : MonoBehaviour
         startText.SetActive(false);
         instructions.SetActive(false);
         endReuseScene.SetActive(true);
+        nextRecycle.SetActive(false);
+    }
+
+    //Proceed to Recycle UI displayed
+    public void NextRecycleScene()
+    {
+        startText.SetActive(false);
+        instructions.SetActive(false);
+        endReuseScene.SetActive(false);
+        nextRecycle.SetActive(true);
     }
 
     public void ChangeToRecycleScene()

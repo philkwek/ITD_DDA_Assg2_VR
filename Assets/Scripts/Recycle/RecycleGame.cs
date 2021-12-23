@@ -23,6 +23,7 @@ public class RecycleGame : MonoBehaviour
 
     public GameObject locked;
     public GameObject unlocked;
+    public GameObject lastPanel;
 
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI finalScore;
@@ -139,18 +140,3 @@ public class RecycleGame : MonoBehaviour
         scoreTxt.text = "Score: " + score;
     }
 
-    public void TrackScoreStreak(bool streak)
-    {
-        //if true, means player successfully scored
-        if (streak) 
-        {
-            currentStreak += 1;
-
-        }
-        else //if false, it breaks the current streak and restarts from 0, saves current streak for db 
-        {
-            savedStreak = currentStreak;
-            currentStreak = 0;
-        }
-    }
-}
