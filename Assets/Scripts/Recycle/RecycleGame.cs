@@ -140,7 +140,7 @@ public class RecycleGame : MonoBehaviour
         scoreTxt.text = "Score: " + score;
     }
 
-    public void TrackCurrentStreak(bool track)
+    public void TrackScoreStreak(bool track)
     {
         if (track)
         {
