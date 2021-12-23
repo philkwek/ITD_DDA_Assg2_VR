@@ -1,33 +1,22 @@
 ﻿<Properties StartupConfiguration="{B6D5A9F7-E7B5-0489-69BD-23708457CDAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Recycle/Recyclable.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Recycle/Drop.cs">
     <Files>
-      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="340" Column="54" />
+      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="509" Column="1" />
       <File FileName="Assets/Scripts/FirebaseScripts/WelcomePage.cs" />
       <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" />
       <File FileName="Assets/Scripts/FirebaseScripts/MenuManager.cs" />
+      <File FileName="Assets/Scripts/Recycle/RecycleGame.cs" Line="145" Column="12" />
       <File FileName="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" Line="9" Column="41" NotebookId="1" />
       <File FileName="Assets/Scripts/FirebaseScripts/Obj/Day.cs" NotebookId="1" />
       <File FileName="Assets/Scripts/FirebaseScripts/Obj/MinigameStats.cs" Line="24" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Recycle/RecycleGame.cs" Line="147" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/Recycle/TimeManager.cs" Line="131" Column="29" NotebookId="1" />
+      <File FileName="Assets/Scripts/Recycle/TimeManager.cs" Line="131" Column="37" NotebookId="1" />
       <File FileName="Assets/Scripts/Recycle/Drop.cs" Line="15" Column="49" NotebookId="1" />
-      <File FileName="Assets/Scripts/Recycle/Recyclable.cs" Line="10" Column="12" NotebookId="1" />
+      <File FileName="Assets/Scripts/Recycle/Recyclable.cs" Line="20" Column="48" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ITD_DDA_Assg2_VR" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="FirebaseScripts" expanded="True">
-                  <Node name="Obj" expanded="True" />
-                </Node>
-                <Node name="Recycle" expanded="True">
-                  <Node name="Recyclable.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="ITD_DDA_Assg2_VR" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

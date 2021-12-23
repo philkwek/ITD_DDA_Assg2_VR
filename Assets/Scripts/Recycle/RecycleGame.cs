@@ -47,7 +47,7 @@ public class RecycleGame : MonoBehaviour
             locked.SetActive(true);
             unlocked.SetActive(false);
         }
-        else 
+        else
         {
             locked.SetActive(false);
             unlocked.SetActive(true);
@@ -140,3 +140,15 @@ public class RecycleGame : MonoBehaviour
         scoreTxt.text = "Score: " + score;
     }
 
+    public void TrackCurrentStreak(bool track)
+    {
+        if (track)
+        {
+            currentStreak += 1;
+        } else
+        {
+            savedStreak = currentStreak;
+            currentStreak = 0;
+        }
+    }
+}
