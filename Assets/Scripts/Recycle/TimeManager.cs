@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Globalization;
+using System.Linq;
 
 public class TimeManager : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class TimeManager : MonoBehaviour
     private string resetText = "00:00:00";
 
     public static float timeElapsed = 0;
+
+    //reference for recording time
+    public float recordTimeStart;
 
     IEnumerator StopWatch()
     {
@@ -113,5 +118,25 @@ public class TimeManager : MonoBehaviour
         timeRemaining = 20;
         timeRemainingDisplay.color = Color.white;
         StartStopWatch();
+    }
+
+    //"Starts" timer to record how long player took for game
+    public void RecordTimeStart()
+    {
+        recordTimeStart = Time.realtimeSinceStartup;
+    }
+    //function for use to get recorded time for how long user spent in minigame round at round end
+    public float GetTimeRecorded()
+    {
+        //gets time spent in minigame in seconds
+        float endTime = Time.realtimeSinceStartup;
+        float recordedTime = endTime - recordTimeStart;
+
+        //converts time from seconds to minutes and 2dp
+        float timeMinute = recordedTime / 60;
+        string twoDP = timeMinute.ToString("F2");
+        float finalTime = float.Parse(twoDP, CultureInfo.InvariantCulture.NumberFormat);
+
+        return finalTime;
     }
 }

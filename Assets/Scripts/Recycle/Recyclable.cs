@@ -7,6 +7,8 @@ public class Recyclable : MonoBehaviour
     public Animator plusTime;
     public Animator minusTime;
 
+    public RecycleGame recycleGame;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Recyclable")
@@ -15,6 +17,7 @@ public class Recyclable : MonoBehaviour
             plusTime.SetTrigger("PlusTime");
             TimeManager.timeRemaining += 5;
             RecycleGame.score += 1;
+            recycleGame.TrackScoreStreak(true);
         }
         else if (other.tag == "NonRecyclable")
         {

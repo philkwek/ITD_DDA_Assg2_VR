@@ -7,6 +7,12 @@ using TMPro;
 
 public class RecycleGame : MonoBehaviour
 {
+    //functions for firebase tracking
+    public TimeManager timeManager;
+    public GameObject databaseManager;
+    public int currentStreak = 0;
+    public int savedStreak = 0;
+
     public List<GameObject> throwables;
     public static bool isGameActive = false;
     public static bool isOne = false;
@@ -31,6 +37,9 @@ public class RecycleGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Finds GameManager under DontDestroyOnLoad()
+        databaseManager = GameObject.Find("GameManager");
+
         score = 0;
         if (isUnlocked == false)
         {
@@ -72,6 +81,7 @@ public class RecycleGame : MonoBehaviour
         }
     }
 
+    //function runs when game is over
     public void GameOver()
     {
         isGameActive = false;
@@ -87,10 +97,16 @@ public class RecycleGame : MonoBehaviour
         {
             wrong.text = string.Format("* {0} trash had been place into the wrong bins *", miss);
         }
+
+        //functions to enter new minigame stats into realtimeDbManager
+        float roundTime = timeManager.GetTimeRecorded();
+        int throwStreak = savedStreak;
+        databaseManager.GetComponent<RealtimeDbManager>().NewMinigameStats(score, roundTime, throwStreak, score, miss, throws);
     }
 
     public void StartGame()
     {
+        timeManager.RecordTimeStart();
         intructions.SetActive(false);
         gameItems.SetActive(true);
         isGameActive = true;
@@ -121,5 +137,20 @@ public class RecycleGame : MonoBehaviour
     private void UpdateScore()
     {
         scoreTxt.text = "Score: " + score;
+    }
+
+    public void TrackScoreStreak(bool streak)
+    {
+        //if true, means player successfully scored
+        if (streak) 
+        {
+            currentStreak += 1;
+
+        }
+        else //if false, it breaks the current streak and restarts from 0, saves current streak for db 
+        {
+            savedStreak = currentStreak;
+            currentStreak = 0;
+        }
     }
 }

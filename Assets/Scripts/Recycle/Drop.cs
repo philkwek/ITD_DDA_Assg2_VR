@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
+    public RecycleGame recycleGame;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Recyclable" || other.tag == "NonRecyclable")
@@ -11,6 +12,7 @@ public class Drop : MonoBehaviour
             Destroy(other.gameObject);
             RecycleGame.isOne = false;
             RecycleGame.miss += 1;
+            recycleGame.TrackScoreStreak(false);
         }
     }
 }

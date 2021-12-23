@@ -17192,9 +17192,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accountNameUI: {fileID: 438936277}
+  onlinePlayersUI: {fileID: 479932067}
   weekOfYear: 0
   dayOfWeek: 
   date: 
+  completion: 0
+  noOfMinigamesCompleted: 0
+  noOfTaskCompleted: 0
+  objectsPicked: 0
+  noOfCraftsMade: 0
+  minigameAccuracyPercentage: 0
+  minigameHighscore: 0
+  minigameLongestRound: 0
+  minigameThrowStreak: 0
+  minigameTotalHits: 0
+  minigameTotalMiss: 0
+  minigameTotalThrows: 0
 --- !u!1001 &1682876089
 PrefabInstance:
   m_ObjectHideFlags: 0
