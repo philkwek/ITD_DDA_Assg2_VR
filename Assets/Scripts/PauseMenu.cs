@@ -14,19 +14,40 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseUI;
     public GameObject pauseBtn;
 
+    public GameObject databaseManager;
+
+    private void Start()
+    {
+        //Finds GameManager under DontDestroyOnLoad()
+        databaseManager = GameObject.Find("DatabaseManager");
+    }
+
     public void Appear()
     {
+        Time.timeScale = 0;
         pauseUI.SetActive(true);
     }
 
     public void Resume()
     {
+        Time.timeScale = 1;
         pauseUI.SetActive(false);
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        databaseManager.GetComponent<RealtimeDbManager>().GoOffline();
+        Invoke("CloseGame", 3);
+    }
+
+    private void CloseGame()
+    {
+        Application.Quit();
     }
 
 }
