@@ -40,6 +40,8 @@ public class RecycleGame : MonoBehaviour
     {
         //Finds GameManager under DontDestroyOnLoad()
         databaseManager = GameObject.Find("DatabaseManager");
+        //sets new timing from db
+        TimeManager.timeRemaining = databaseManager.GetComponent<RealtimeDbManager>().startingTime;
 
         score = 0;
         if (isUnlocked == false)

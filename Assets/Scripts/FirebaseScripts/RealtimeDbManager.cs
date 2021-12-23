@@ -42,6 +42,9 @@ public class RealtimeDbManager : MonoBehaviour
     public int minigameTotalMiss;
     public int minigameTotalThrows;
 
+    //Recycle Game Data
+    public float startingTime;
+
 
     private void Awake()
     {
@@ -53,6 +56,7 @@ public class RealtimeDbManager : MonoBehaviour
     void Start()
     {
         CurrentlyActive();
+        GetGameData();
 
         if (instance != null)
         {
@@ -92,7 +96,6 @@ public class RealtimeDbManager : MonoBehaviour
             DataSnapshot ds = task.Result;
             if (ds.Exists)
             {
-                Debug.Log("Player found...");
 
                 foreach (DataSnapshot snap in ds.Children)
                 {
@@ -108,6 +111,32 @@ public class RealtimeDbManager : MonoBehaviour
         });
     }
 
+    public void GetGameData()
+    {
+        //This function is to check for game parameter updates from admin client (currently supports recycle game adjustment of starting time
+        Query findRecycleData = databaseRef.Child("gameParameters").Child("recycle");
+        findRecycleData.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.Exception != null)
+            {
+                throw task.Exception;
+            }
+
+            if (!task.IsCompleted)
+            {
+                return;
+            }
+
+            DataSnapshot ds = task.Result;
+            if (ds.Exists)
+            {
+                RecycleData data = JsonUtility.FromJson<RecycleData>(ds.GetRawJsonValue());
+                startingTime = data.startingTime;
+                Debug.Log("Currently set starting time for recycle: " + startingTime);
+            }
+        });
+    }
+
     //function adds user to realtimedb list of currently online users, runs once on startup
     public void CurrentlyActive()
     {
@@ -117,7 +146,6 @@ public class RealtimeDbManager : MonoBehaviour
         CalendarWeekRule myCWR = myCI.DateTimeFormat.CalendarWeekRule;
         DayOfWeek myFirstDOW = myCI.DateTimeFormat.FirstDayOfWeek;
         weekOfYear = myCal.GetWeekOfYear(DateTime.Now, myCWR, myFirstDOW);
-        Debug.Log(weekOfYear);
 
         DateTime dt = System.DateTime.Now;
         dayOfWeek = dt.DayOfWeek.ToString();
@@ -334,12 +362,10 @@ public class RealtimeDbManager : MonoBehaviour
         float timeMinute = timeNow / 60;
         string twoDP = timeMinute.ToString("F2");
         float finalTime = float.Parse(twoDP, CultureInfo.InvariantCulture.NumberFormat);
-        Debug.Log(finalTime);
 
         float currentTotalMin;
         string currentTime = DateTime.Now.ToString("HH:mm:ss");
         string dateTitle = date + "T" + currentTime;
-        Debug.Log(dateTitle);
 
         //get current total time spent for the day (min)
         Query findDay = databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek);
@@ -414,7 +440,6 @@ public class RealtimeDbManager : MonoBehaviour
                 List<string> currentlyActive = newDay.currentlyActive.ToList();
                 currentlyActive.Remove(auth.CurrentUser.UserId);
                 string[] currentActiveArray = currentlyActive.ToArray();
-                Debug.Log(currentActiveArray);
                 databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek).Child("currentlyActive").SetValueAsync(currentActiveArray);
             }
         });

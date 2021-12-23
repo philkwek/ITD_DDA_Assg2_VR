@@ -89,6 +89,7 @@
     <Compile Include="Assets/Scripts/Reuse/ToggleUI.cs" />
     <Compile Include="Assets/Scripts/FirebaseScripts/Obj/WeeklyActive.cs" />
     <Compile Include="Assets/Scripts/Recycle/TimeManager.cs" />
+    <Compile Include="Assets/Scripts/FirebaseScripts/Obj/RecycleData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Firebase/Plugins/x86_64/FirebaseCppApp-8_5_0.dll" />

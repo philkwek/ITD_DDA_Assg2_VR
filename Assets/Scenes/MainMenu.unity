@@ -1532,7 +1532,7 @@ MonoBehaviour:
       m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: a4e50f80-e88b-445d-9d5e-aece619be9ac
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1544,7 +1544,7 @@ MonoBehaviour:
       m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: f088c029-0732-4f26-b43f-0903b8b360ad
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -17992,7 +17992,7 @@ GameObject:
   - component: {fileID: 1659497409}
   - component: {fileID: 1659497411}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: DatabaseManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18055,6 +18055,7 @@ MonoBehaviour:
   minigameTotalHits: 0
   minigameTotalMiss: 0
   minigameTotalThrows: 0
+  startingTime: 0
 --- !u!1001 &1682876089
 PrefabInstance:
   m_ObjectHideFlags: 0
