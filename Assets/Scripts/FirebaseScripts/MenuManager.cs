@@ -8,6 +8,8 @@ public class MenuManager : MonoBehaviour
     public GameObject loginPage;
     public GameObject homePage;
 
+    public RealtimeDbManager dbManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,12 @@ public class MenuManager : MonoBehaviour
     }
 
     public void QuitGame()
+    {
+        dbManager.GoOffline();
+        Invoke("closeGame", 3);
+    }
+
+    private void closeGame()
     {
         Application.Quit();
     }
@@ -67,6 +75,7 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
+    
 
 
 }

@@ -17,6 +17,7 @@ public class RealtimeDbManager : MonoBehaviour
     DatabaseReference databaseRef;
 
     public TextMeshProUGUI accountNameUI;
+    public TextMeshProUGUI onlinePlayersUI;
     public static RealtimeDbManager instance;
 
     public int weekOfYear;
@@ -42,8 +43,7 @@ public class RealtimeDbManager : MonoBehaviour
             instance = this;
         }
         DontDestroyOnLoad(gameObject);
-
-        Invoke("GoOffline", 10);
+        InvokeRepeating("GetNoOnline", 2.0f, 10.0f);
     }
 
     // Update is called once per frame
@@ -86,7 +86,7 @@ public class RealtimeDbManager : MonoBehaviour
             {
                 Debug.Log("Player does not exist");
             }
-           });
+        });
     }
 
     //function adds user to realtimedb list of currently online users, runs once on startup
@@ -345,4 +345,35 @@ public class RealtimeDbManager : MonoBehaviour
             }
         });
     }
+
+    public void GetNoOnline()
+    {
+        Query searchOnline = databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek);
+        searchOnline.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.Exception != null)
+            {
+                throw task.Exception;
+            }
+
+            if (!task.IsCompleted)
+            {
+                return;
+            }
+
+            //Take snapshot of database
+            DataSnapshot ds = task.Result;
+            if (ds.Exists)
+            {
+                Day newDay = JsonUtility.FromJson<Day>(ds.GetRawJsonValue());
+                var noOfOnlinePlayers = newDay.currentlyActive.Length;
+                onlinePlayersUI.text = "Players Online: " + noOfOnlinePlayers;
+            }
+            else
+            {
+                Debug.Log("error");
+            }
+        });
+    }
+
 }

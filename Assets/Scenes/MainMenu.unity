@@ -1570,6 +1570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loginPage: {fileID: 49482836}
   homePage: {fileID: 2122905188}
+  dbManager: {fileID: 1659497411}
 --- !u!1001 &165388035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17191,6 +17192,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accountNameUI: {fileID: 438936277}
+  weekOfYear: 0
+  dayOfWeek: 
+  date: 
 --- !u!1001 &1682876089
 PrefabInstance:
   m_ObjectHideFlags: 0
