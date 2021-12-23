@@ -22,12 +22,12 @@ public class TimeManager : MonoBehaviour
 
     private string resetText = "00:00:00";
 
+    public static string timeElapsed = "00:00:00";
+
     IEnumerator StopWatch()
     {
         while (true)
         {
-            int fps = (int)(1 / Time.unscaledDeltaTime);
-
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
@@ -47,7 +47,6 @@ public class TimeManager : MonoBehaviour
 
     void DisplayTime(float timeToDisplay)
     {
-       
         if(timeToDisplay < 0)
         {
             timeToDisplay = 0;
@@ -69,12 +68,17 @@ public class TimeManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
 
     }
 
-    public void StartTimer()
+    private void Update()
+    {
+        Debug.Log(Time.timeSinceLevelLoad);
+    }
+
+    public void StartStopWatch()
     {
         //startButton.enabled = false;
         StartCoroutine("StopWatch");
@@ -82,7 +86,7 @@ public class TimeManager : MonoBehaviour
     }
 
 
-    public void StopTimer()
+    public void StopStopWatch()
     {
         //startButton.enabled = true;
         StopCoroutine("StopWatch");
@@ -108,6 +112,11 @@ public class TimeManager : MonoBehaviour
     {
         timeRemaining = 20;
         timeRemainingDisplay.color = Color.white;
-        StartTimer();
+        StartStopWatch();
+    }
+
+    public void StartTimer()
+    {
+        StartCoroutine("Timer");
     }
 }

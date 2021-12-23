@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Recyclable : MonoBehaviour
 {
-    public List<GameObject> note;
     public Animator plusTime;
 
     private void OnTriggerEnter(Collider other)
@@ -18,11 +17,10 @@ public class Recyclable : MonoBehaviour
         }
         else if (other.tag == "NonRecyclable")
         {
-            //Check what object
-            int index = 0;
             //Do Something
-            note[index].SetActive(true);
             Time.timeScale = 0;
+            TimeManager.timeRemaining -= 3;
+            RecycleGame.miss += 1;
         }
         Destroy(other.gameObject);
 

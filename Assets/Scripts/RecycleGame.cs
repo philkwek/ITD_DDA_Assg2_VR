@@ -22,11 +22,24 @@ public class RecycleGame : MonoBehaviour
     public TextMeshProUGUI finalScore;
 
     public static int score;
+    public static int miss;
+
+    public static bool isUnlocked = false;
 
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
+        if (isUnlocked == false)
+        {
+            locked.SetActive(true);
+            unlocked.SetActive(false);
+        }
+        else 
+        {
+            locked.SetActive(false);
+            unlocked.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -78,6 +91,7 @@ public class RecycleGame : MonoBehaviour
     {
         Time.timeScale = 1;
         //Return to menu
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void Unlocked()
