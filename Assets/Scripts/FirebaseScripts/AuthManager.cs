@@ -140,7 +140,7 @@ public class AuthManager : MonoBehaviour
     {
         //create new objects from obj scripts
         Player player = new Player(false, email, userId, username);
-        PlayerProfileData playerProfileData = new PlayerProfileData(0, 0, 0, 0, username);
+        PlayerProfileData playerProfileData = new PlayerProfileData(0, 0, 0, 0, username, 0);
         MinigameStats minigameStats = new MinigameStats("0", 0, 0, 0, 0, 0, 0);
         PlayerGameData playerGameData = new PlayerGameData(minigameStats, 0, 0, username);
 

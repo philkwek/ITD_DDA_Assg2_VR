@@ -484,6 +484,7 @@ public class RealtimeDbManager : MonoBehaviour
         databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("completion").SetValueAsync(completion);
         databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfMinigamesCompleted").SetValueAsync(noOfMinigamesCompleted);
         databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfTaskCompleted").SetValueAsync(noOfTaskCompleted);
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("minigameHighscore").SetValueAsync(minigameHighscore);
     }
 
     public void GetNoOnline()
