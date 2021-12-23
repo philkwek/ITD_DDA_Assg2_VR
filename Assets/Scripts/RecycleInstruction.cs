@@ -21,7 +21,6 @@ public class RecycleInstruction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentPage);
         if (currentPage == 1)
         {
             back.SetActive(false);

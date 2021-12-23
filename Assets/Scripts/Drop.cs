@@ -10,6 +10,7 @@ public class Drop : MonoBehaviour
         {
             Destroy(other.gameObject);
             RecycleGame.isOne = false;
+            RecycleGame.miss += 1;
         }
     }
 }

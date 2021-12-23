@@ -22,7 +22,7 @@ public class TimeManager : MonoBehaviour
 
     private string resetText = "00:00:00";
 
-    public static string timeElapsed = "00:00:00";
+    public static float timeElapsed = 0;
 
     IEnumerator StopWatch()
     {
@@ -51,14 +51,14 @@ public class TimeManager : MonoBehaviour
         {
             timeToDisplay = 0;
             time = timeLimit;
-            Debug.Log("time limit" + timeLimit);
+            //Debug.Log("time limit " + timeLimit);
             
         }
         float min = Mathf.FloorToInt(timeToDisplay / 60);
         float sec = Mathf.FloorToInt(timeToDisplay % 60);//removes the mins
     
         float msec = (timeToDisplay % 1) * 1000;//Mathf.FloorToInt((timeRemaining - sec) * 100);
-        Debug.Log("msec... " + msec);
+        //Debug.Log("msec... " + msec);
         timeRemainingDisplay.text = string.Format("{0:00}:{1:00}:{2:00}", min, sec, msec);
 
         msec = Mathf.FloorToInt((time - (int)time) * 100);
@@ -75,7 +75,7 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Time.timeSinceLevelLoad);
+        timeElapsed = Time.timeSinceLevelLoad;
     }
 
     public void StartStopWatch()
@@ -113,10 +113,5 @@ public class TimeManager : MonoBehaviour
         timeRemaining = 20;
         timeRemainingDisplay.color = Color.white;
         StartStopWatch();
-    }
-
-    public void StartTimer()
-    {
-        StartCoroutine("Timer");
     }
 }

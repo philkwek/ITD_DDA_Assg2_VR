@@ -21,8 +21,9 @@ public class RecycleGame : MonoBehaviour
     public TextMeshProUGUI scoreTxt;
     public TextMeshProUGUI finalScore;
 
-    public static int score;
-    public static int miss;
+    public static int score = 0;
+    public static int miss = 0;
+    public static int throws = 0;
 
     public static bool isUnlocked = false;
 
@@ -53,6 +54,10 @@ public class RecycleGame : MonoBehaviour
         }
 
         UpdateScore();
+
+        Debug.Log(throws);
+        Debug.Log(score);
+        Debug.Log(miss);
     }
 
     private void SpawnThrowables()
@@ -62,6 +67,7 @@ public class RecycleGame : MonoBehaviour
             int index = Random.Range(0, throwables.Count);
             Instantiate(throwables[index]);
             isOne = true;
+            throws += 1;
         }
     }
 
@@ -85,6 +91,8 @@ public class RecycleGame : MonoBehaviour
         Time.timeScale = 1;
         gameOver.SetActive(false);
         score = 0;
+        miss = 0;
+        throws = 0;
     }
 
     public void MainMenu()

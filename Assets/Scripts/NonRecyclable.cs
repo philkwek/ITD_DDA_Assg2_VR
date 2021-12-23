@@ -5,6 +5,7 @@ using UnityEngine;
 public class NonRecyclable : MonoBehaviour
 {
     public Animator plusTime;
+    public Animator minusTime;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +19,7 @@ public class NonRecyclable : MonoBehaviour
         else if (other.tag == "Recyclable")
         {
             //Do Something
-            Time.timeScale = 0;
+            minusTime.SetTrigger("MinusTime");
             TimeManager.timeRemaining -= 3;
             RecycleGame.miss += 1;
         }
