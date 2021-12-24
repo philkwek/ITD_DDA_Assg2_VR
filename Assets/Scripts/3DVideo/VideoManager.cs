@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class VideoManager : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
+    public PauseMenu pauseMenu;
 
     void Start()
     {
@@ -15,6 +17,11 @@ public class VideoManager : MonoBehaviour
     private void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
         // Do something
-        Debug.Log("Video Ended");
+        pauseMenu.Finish();
+    }
+
+   public void ToReuse()
+    {
+        SceneManager.LoadScene("Reuse");
     }
 }

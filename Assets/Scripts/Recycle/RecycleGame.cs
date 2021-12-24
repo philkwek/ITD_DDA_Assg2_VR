@@ -17,6 +17,10 @@ public class RecycleGame : MonoBehaviour
     public static bool isGameActive = false;
     public static bool isOne = false;
 
+    public List<GameObject> directControl;
+    public List<GameObject> rayControl;
+    public List<GameObject> previousControl;
+
     public GameObject gameOver;
     public GameObject intructions;
     public GameObject gameItems;
@@ -87,8 +91,8 @@ public class RecycleGame : MonoBehaviour
     //function runs when game is over
     public void GameOver()
     {
+        Raycast();
         isGameActive = false;
-        Time.timeScale = 0;
         gameOver.SetActive(true);
         gameItems.SetActive(false);
         finalScore.text = scoreTxt.text;
@@ -114,6 +118,11 @@ public class RecycleGame : MonoBehaviour
         databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
     }
 
+    public void CloseGameOver()
+    {
+        gameOver.SetActive(false);
+    }
+
     public void StartGame()
     {
         timeManager.RecordTimeStart();
@@ -124,7 +133,6 @@ public class RecycleGame : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1;
         gameOver.SetActive(false);
         score = 0;
         miss = 0;
@@ -158,6 +166,66 @@ public class RecycleGame : MonoBehaviour
         {
             savedStreak = currentStreak;
             currentStreak = 0;
+        }
+    }
+
+    public void Raycast()
+    {
+        previousControl.Clear();
+        StoreControl();
+
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(true);
+            rayControl[1].SetActive(true);
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+        }
+    }
+
+    public void Direct()
+    {
+        previousControl.Clear();
+        StoreControl();
+
+        if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            directControl[0].SetActive(true);
+            directControl[1].SetActive(true);
+        }
+    }
+
+    public void StoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            previousControl.Add(directControl[0]);
+            previousControl.Add(directControl[1]);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            previousControl.Add(rayControl[0]);
+            previousControl.Add(rayControl[1]);
+        }
+    }
+
+    public void RetoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
         }
     }
 }

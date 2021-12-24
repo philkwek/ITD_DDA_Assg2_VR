@@ -26,6 +26,8 @@ public class TimeManager : MonoBehaviour
 
     public static float timeElapsed = 0;
 
+    public RecycleGame GameManager;
+
     //reference for recording time
     public float recordTimeStart;
 
@@ -44,7 +46,8 @@ public class TimeManager : MonoBehaviour
                 timeRemaining = 0;
                 time = timeLimit;
                 timeRemainingDisplay.color = Color.red;
-                gameEnd = true;
+                //gameEnd = true;
+                GameManager.GameOver();
             }
             yield return null;
         }

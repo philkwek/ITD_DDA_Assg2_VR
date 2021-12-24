@@ -10,11 +10,14 @@ public class AttachReduce : MonoBehaviour
     public GameObject resultsGood;
     public GameObject resultsBad;
 
+    public ReduceUI reduceUI;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "MetalSpoon")
         {
             //Do something
+            reduceUI.Raycast();
             metalBoard.SetActive(true);
             spoonMountain.SetActive(true);
             //resultsGood.SetActive(true);
@@ -23,6 +26,7 @@ public class AttachReduce : MonoBehaviour
         }
         else if (other.tag == "PlasticSpoon")
         {
+            reduceUI.Raycast();
             plasticBoard.SetActive(true);
             spoonMountain.SetActive(true);
             //resultsGood.SetActive(false);
@@ -35,6 +39,7 @@ public class AttachReduce : MonoBehaviour
         if (other.tag == "MetalSpoon")
         {
             //Do something
+            reduceUI.Direct();
             metalBoard.SetActive(false);
             spoonMountain.SetActive(false);
             resultsGood.SetActive(false);
@@ -45,6 +50,7 @@ public class AttachReduce : MonoBehaviour
         else if (other.tag == "PlasticSpoon")
         {
             //Do something
+            reduceUI.Direct();
             plasticBoard.SetActive(false);
             spoonMountain.SetActive(false);
             resultsGood.SetActive(false);

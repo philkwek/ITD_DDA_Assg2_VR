@@ -15,6 +15,11 @@ GameObject:
   - component: {fileID: -500428979063333407}
   - component: {fileID: -7425355990873387260}
   - component: {fileID: 6976033692088062157}
+  - component: {fileID: 8161206642579457486}
+  - component: {fileID: 3447144364621623481}
+  - component: {fileID: -6342044510159747803}
+  - component: {fileID: -3756773043300692661}
+  - component: {fileID: 6056250284861908292}
   m_Layer: 6
   m_Name: Plastic Straw Straight
   m_TagString: NonRecyclable
@@ -242,3 +247,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   databaseManager: {fileID: 0}
+--- !u!114 &8161206642579457486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303749346423247256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3447144364621623481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303749346423247256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6342044510159747803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303749346423247256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3756773043300692661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303749346423247256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6056250284861908292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3303749346423247256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
