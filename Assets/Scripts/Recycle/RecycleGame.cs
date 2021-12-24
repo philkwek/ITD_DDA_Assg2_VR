@@ -95,13 +95,13 @@ public class RecycleGame : MonoBehaviour
         gameOver.SetActive(true);
         gameItems.SetActive(false);
         finalScore.text = scoreTxt.text;
-        if (score == 0)
+        if (miss == 0)
         {
             wrong.text = "* No trash have been place into the wrong bins *";
         }
         else
         {
-            wrong.text = string.Format("* {0} trash had been place into the wrong bins *", score);
+            wrong.text = string.Format("* {0} trash had been place into the wrong bins *", miss);
         }
 
         //functions to enter new minigame stats into realtimeDbManager
@@ -115,6 +115,11 @@ public class RecycleGame : MonoBehaviour
         databaseManager.GetComponent<RealtimeDbManager>().NewMinigameStats(score, roundTime, throwStreak, score, miss, throws);
         databaseManager.GetComponent<RealtimeDbManager>().noOfMinigamesCompleted += 1;
         databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
+    }
+
+    public void CloseGameOver()
+    {
+        gameOver.SetActive(false);
     }
 
     public void StartGame()

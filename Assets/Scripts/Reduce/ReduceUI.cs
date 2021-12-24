@@ -20,6 +20,10 @@ public class ReduceUI : MonoBehaviour
     public GameObject databaseManager;
 
     public AudioSource doneSound;
+
+    public List<GameObject> directControl;
+    public List<GameObject> rayControl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -88,5 +92,23 @@ public class ReduceUI : MonoBehaviour
         };
         databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
         SceneManager.LoadScene("Reuse");
+    }
+
+    public void ChangeControls()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(true);
+            rayControl[1].SetActive(true);
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            directControl[0].SetActive(true);
+            directControl[1].SetActive(true);
+        }
     }
 }

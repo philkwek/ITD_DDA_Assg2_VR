@@ -14,7 +14,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseUI;
     public GameObject pauseBtn;
 
+    public GameObject finishUI;
+
     public GameObject databaseManager;
+
+    public RecycleGame GameManager;
 
     private void Start()
     {
@@ -45,9 +49,19 @@ public class PauseMenu : MonoBehaviour
         Invoke("CloseGame", 3);
     }
 
-    private void CloseGame()
+    public void CloseGame()
     {
         Application.Quit();
     }
 
+    public void Finish()
+    {
+        GameManager.CloseGameOver();
+        finishUI.SetActive(true);
+    }
+
+    public void CloseFinish()
+    {
+        finishUI.SetActive(false);
+    }
 }
