@@ -1,3 +1,9 @@
+/******************************************************************************
+Author: Eileen, Kelly, Elicia, Phil, Donavan
+Name of Class: Tutorial
+Description of Class: This script is for the tutorial scene
+Date Created: 15/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

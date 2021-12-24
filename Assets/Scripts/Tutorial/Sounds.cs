@@ -1,3 +1,9 @@
+/******************************************************************************
+Author: Eileen, Elicia, Phil, Donavan, Kelly
+Name of Class: Sounds
+Description of Class: This script is to toggle the text menu in the reuse scene
+Date Created: 24/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,9 @@
+/******************************************************************************
+Author: Kelly, Eileen, Elicia, Phil, Donavan
+Name of Class: Attach Reduce
+Description of Class: This script is to allow users to attach spoons to the box in the reduce scene
+Date Created: 9/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +20,7 @@ public class AttachReduce : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //If users chosen the Metal Spoon, the board and the mountain spoon will be spawned
         if (other.tag == "MetalSpoon")
         {
             //Do something
@@ -24,6 +31,8 @@ public class AttachReduce : MonoBehaviour
             //resultsBad.SetActive(false);
             
         }
+
+        //If users chosen the Plastic Spoon, the board and the mountain spoon will be spawned
         else if (other.tag == "PlasticSpoon")
         {
             reduceUI.Raycast();
@@ -36,6 +45,7 @@ public class AttachReduce : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        //If users picks up the Metal Spoon from the box, the board and the mountain spoon will disappear
         if (other.tag == "MetalSpoon")
         {
             //Do something
@@ -47,6 +57,7 @@ public class AttachReduce : MonoBehaviour
             Debug.Log("Error123");
         }
 
+        //If users picks up the Plastic Spoon from the box, the board and the mountain spoon will disappear
         else if (other.tag == "PlasticSpoon")
         {
             //Do something

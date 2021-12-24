@@ -1,6 +1,6 @@
 /******************************************************************************
 Author: Kelly, Eileen, Elicia, Phil, Donavan
-Name of Class: Toggle UI
+Name of Class: Reduce UI
 Description of Class: This script is to toggle the text menu in the reduce scene
 Date Created: 20/12/21
 ******************************************************************************/
@@ -29,6 +29,7 @@ public class ReduceUI : MonoBehaviour
     void Start()
     {
         //Finds GameManager under DontDestroyOnLoad()
+        //Show the introduction UI only
         databaseManager = GameObject.Find("DatabaseManager");
 
         intro.SetActive(true);
@@ -40,6 +41,7 @@ public class ReduceUI : MonoBehaviour
         doneSound = GetComponent<AudioSource>();
     }
 
+    //Show the start button UI only
     public void SecondNext()
     {
         intro.SetActive(false);
@@ -49,6 +51,7 @@ public class ReduceUI : MonoBehaviour
         nextReuse.SetActive(false);
     }
 
+    //Go back to the gameplay, no UI showing
     public void Back()
     {
         intro.SetActive(false);
@@ -58,6 +61,7 @@ public class ReduceUI : MonoBehaviour
         nextReuse.SetActive(false);
     }
 
+    //Go to Reuse button shown
     public void Next()
     {
         intro.SetActive(false);
@@ -67,6 +71,7 @@ public class ReduceUI : MonoBehaviour
         nextReuse.SetActive(true);
     }
 
+    //If user choose the Metal Spoon, shows the outcome
     public void ResultGood()
     {
         intro.SetActive(false);
@@ -76,6 +81,7 @@ public class ReduceUI : MonoBehaviour
         nextReuse.SetActive(false);
     }
 
+    //If user choose the Plastic Spoon, shows the outcome
     public void ResultBad()
     {
         intro.SetActive(false);
@@ -84,6 +90,8 @@ public class ReduceUI : MonoBehaviour
         resultsBad.SetActive(true);
         nextReuse.SetActive(false);
     }
+
+    //After end of game, go to the video
     public void GoVideo()
     {
         int completion = databaseManager.GetComponent<RealtimeDbManager>().completion;

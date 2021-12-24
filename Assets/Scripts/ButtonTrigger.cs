@@ -1,3 +1,9 @@
+/******************************************************************************
+Author: Kelly, Donovan, Elicia, Phil, Eileen
+Name of Class: Button Trigger
+Description of Class: This script is to toggle the text menu in the reuse scene
+Date Created: 3/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +18,6 @@ public class ButtonTrigger : MonoBehaviour
     {
         //Play ButtonPressed animation
         buttonAnimator.SetBool("isPressed", true);
-
-        //Do something
     }
 
     //If button is released...
@@ -21,7 +25,5 @@ public class ButtonTrigger : MonoBehaviour
     {
         //Play ButtonReleased animation
         buttonAnimator.SetBool("isPressed", false);
-
-        //Do something
     }
 }
