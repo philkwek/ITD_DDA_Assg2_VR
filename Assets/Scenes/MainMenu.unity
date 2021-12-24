@@ -2079,13 +2079,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141995048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1098633, y: 1.7448874, z: 9.920647}
+  m_LocalPosition: {x: 43.843136, y: -3.4551125, z: -42.359352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 49482837}
   - {fileID: 2122905189}
-  m_Father: {fileID: 747663145}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &141995050
 MonoBehaviour:
@@ -11592,7 +11592,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1413625109}
-  - {fileID: 141995049}
   m_Father: {fileID: 998427460}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15626,7 +15625,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &968534271
 GameObject:
@@ -16322,7 +16321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998427459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.1, y: 0, z: 9.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1558439287}
@@ -23191,7 +23190,7 @@ MonoBehaviour:
       m_SingletonActionBindings:
       - m_Name: 
         m_Id: 8e3259e3-5eca-45d3-b82b-4e11c8558e77
-        m_Path: <XRHMD>/centerEyePosition
+        m_Path: <OculusHMD>/devicePosition
         m_Interactions: 
         m_Processors: 
         m_Groups: 
@@ -23211,14 +23210,14 @@ MonoBehaviour:
       m_SingletonActionBindings:
       - m_Name: 
         m_Id: ddb12275-2106-4b95-89bc-dbe4127d2636
-        m_Path: <XRHMD>/centerEyeRotation
+        m_Path: <XRInputV1::Oculus::OculusQuest>/devicerotation
         m_Interactions: 
         m_Processors: 
         m_Groups: 
         m_Action: Rotation
         m_Flags: 0
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -530380113134220495, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_PositionAction:
     m_Name: 
     m_Type: 0
@@ -23820,7 +23819,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1659497411
 MonoBehaviour:
@@ -28804,7 +28803,7 @@ Transform:
   m_Children:
   - {fileID: 998427460}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2061201696
 MonoBehaviour:
@@ -28835,7 +28834,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1558439290}
   m_OriginBaseGameObject: {fileID: 2061201694}
   m_CameraFloorOffsetObject: {fileID: 998427459}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.1176
 --- !u!1001 &2077762935
 PrefabInstance:
@@ -29356,7 +29355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2133734973
 PrefabInstance:
