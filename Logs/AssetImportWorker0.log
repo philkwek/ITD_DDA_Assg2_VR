@@ -2100,3 +2100,27 @@ Received Import Request.
 Start importing Assets/Scenes/MainMenu.unity using Guid(6a31123fd5070524eab056bf8af0b6a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd985c0c7dd38e6e7e95e34fa6e7fe4') in 0.045598 seconds 
   Import took 0.079102 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 16471.135960 seconds.
+  path: Assets/_Creepy_Cat
+  artifactKey: Guid(ccb08973e5f610940b40295c87c7164b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Creepy_Cat using Guid(ccb08973e5f610940b40295c87c7164b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3292077a9f679be203e1b9b2d15d8a64') in 0.003488 seconds 
+  Import took 0.020912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.963634 seconds.
+  path: Assets/google-services (1).json
+  artifactKey: Guid(7e99963dc7a244a1c9ace63eb5a857ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/google-services (1).json using Guid(7e99963dc7a244a1c9ace63eb5a857ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd8ee40d5689912f6a0b78ac2055426') in 0.147867 seconds 
+  Import took 0.154317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.755058 seconds.
+  path: Assets/google-services.json
+  artifactKey: Guid(cbeac214cbf2d4d83a7b10eafd76ccac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/google-services.json using Guid(cbeac214cbf2d4d83a7b10eafd76ccac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8dfe42a3a59378360e3dc14e208f700') in 0.004070 seconds 
+  Import took 0.009939 seconds .
+
