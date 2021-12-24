@@ -21,6 +21,8 @@ public class RecycleGame : MonoBehaviour
     public List<GameObject> rayControl;
     public List<GameObject> previousControl;
 
+    public Transform spawnPoint;
+
     public GameObject gameOver;
     public GameObject intructions;
     public GameObject gameItems;
@@ -82,7 +84,7 @@ public class RecycleGame : MonoBehaviour
         while (isGameActive && !isOne)
         {
             int index = Random.Range(0, throwables.Count);
-            Instantiate(throwables[index].AddComponent<SelfDestruct>());
+            Instantiate(throwables[index].AddComponent<SelfDestruct>(),spawnPoint.position,Quaternion.identity);
             isOne = true;
             throws += 1;
         }
@@ -91,6 +93,7 @@ public class RecycleGame : MonoBehaviour
     //function runs when game is over
     public void GameOver()
     {
+        timeManager.StopStopWatch();
         Raycast();
         isGameActive = false;
         gameOver.SetActive(true);
@@ -116,11 +119,6 @@ public class RecycleGame : MonoBehaviour
         databaseManager.GetComponent<RealtimeDbManager>().NewMinigameStats(score, roundTime, throwStreak, score, miss, throws);
         databaseManager.GetComponent<RealtimeDbManager>().noOfMinigamesCompleted += 1;
         databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
-    }
-
-    public void CloseGameOver()
-    {
-        gameOver.SetActive(false);
     }
 
     public void StartGame()
@@ -227,5 +225,10 @@ public class RecycleGame : MonoBehaviour
             previousControl[0].SetActive(true);
             previousControl[1].SetActive(true);
         }
+    }
+
+    public void CloseGameOver()
+    {
+        gameOver.SetActive(false);
     }
 }

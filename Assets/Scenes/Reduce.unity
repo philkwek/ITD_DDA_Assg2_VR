@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
   m_HaloStrength: 0.5
@@ -1846,13 +1846,21 @@ MonoBehaviour:
       m_Name: Position
       m_Type: 0
       m_ExpectedControlType: Vector3
-      m_Id: 1887474e-7764-4686-8aa5-9fdb2793b051
+      m_Id: 74673dd7-b564-40ab-a97b-b319e29f49ec
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 8e3259e3-5eca-45d3-b82b-4e11c8558e77
-        m_Path: <XRHMD>/centerEyePosition
+        m_Id: 99db9a69-7558-4975-97b6-790fc41e71f3
+        m_Path: <HandheldARInputDevice>/devicePosition
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Position
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 097e634f-cef8-4cda-8fa6-47c130d918fd
+        m_Path: <OculusHMD>/devicePosition
         m_Interactions: 
         m_Processors: 
         m_Groups: 
@@ -1866,13 +1874,21 @@ MonoBehaviour:
       m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: Quaternion
-      m_Id: 0fe1e481-ffac-4ac0-b2bf-429023c862b6
+      m_Id: fbdf5a56-c113-4d82-bdbc-e23ac7ae5cef
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: ddb12275-2106-4b95-89bc-dbe4127d2636
-        m_Path: <XRHMD>/centerEyeRotation
+        m_Id: 58a67442-f53d-423b-9933-acfb341b5aa0
+        m_Path: <HandheldARInputDevice>/deviceRotation
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Rotation
+        m_Flags: 0
+      - m_Name: 
+        m_Id: fe60ac3a-f921-46d1-a4fa-1958a8de473d
+        m_Path: <XRInputV1::Oculus::OculusQuest>/devicerotation
         m_Interactions: 
         m_Processors: 
         m_Groups: 
