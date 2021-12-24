@@ -564,4 +564,9 @@ public class RealtimeDbManager : MonoBehaviour
         minigameTotalThrows += totalMiss;
     }
 
+    void OnApplicationQuit()
+    {
+        GoOffline();
+    }
+
 }

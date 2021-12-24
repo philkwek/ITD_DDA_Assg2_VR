@@ -1,34 +1,33 @@
 ﻿<Properties StartupConfiguration="{B6D5A9F7-E7B5-0489-69BD-23708457CDAE}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FirebaseScripts/Obj/PlayerProfileData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Recycle/RecycleGame.cs">
     <Files>
-      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="49" Column="5" />
+      <File FileName="Assets/Scripts/Recycle/RecycleGame.cs" Line="31" Column="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/RealtimeDbManager.cs" Line="54" Column="1" />
       <File FileName="Assets/Scripts/FirebaseScripts/WelcomePage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" Line="33" Column="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/MenuManager.cs" Line="27" Column="28" />
-      <File FileName="Assets/Scripts/PauseMenu.cs" Line="33" Column="28" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/RecycleData.cs" Line="7" Column="42" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/PlayerSessionTime.cs" Line="9" Column="41" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/Day.cs" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/MinigameStats.cs" Line="24" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Recycle/Recyclable.cs" Line="20" Column="48" NotebookId="1" />
-      <File FileName="Assets/Scripts/Recycle/RecycleGame.cs" Line="149" Column="43" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/ObjPickUp.cs" Line="31" Column="2" NotebookId="1" />
-      <File FileName="Assets/Scripts/Recycle/Drop.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Recycle/TimeManager.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/LeaderboardScript.cs" Line="65" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/FirebaseScripts/Obj/PlayerProfileData.cs" Line="16" Column="47" NotebookId="1" />
+      <File FileName="Assets/Scripts/FirebaseScripts/AuthManager.cs" />
+      <File FileName="Assets/Scripts/FirebaseScripts/MenuManager.cs" />
+      <File FileName="Assets/Scripts/PauseMenu.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ITD_DDA_Assg2_VR" expanded="True" selected="True" />
+          <Node name="ITD_DDA_Assg2_VR" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="FirebaseScripts" expanded="True" />
+                <Node name="Recycle" expanded="True">
+                  <Node name="RecycleGame.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="23e6d09d-5382-4f53-901e-433b71408459" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="acf82d71-7de4-4fc6-8164-4cb9e01c5d10" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
