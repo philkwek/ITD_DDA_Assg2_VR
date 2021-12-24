@@ -18,8 +18,6 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject databaseManager;
 
-    public RecycleGame GameManager;
-
     private void Start()
     {
         //Finds GameManager under DontDestroyOnLoad()
@@ -56,7 +54,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Finish()
     {
-        GameManager.CloseGameOver();
         finishUI.SetActive(true);
     }
 

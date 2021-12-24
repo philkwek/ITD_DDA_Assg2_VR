@@ -23,6 +23,7 @@ public class ReduceUI : MonoBehaviour
 
     public List<GameObject> directControl;
     public List<GameObject> rayControl;
+    public List<GameObject> previousControl;
 
     // Start is called before the first frame update
     void Start()
@@ -83,7 +84,7 @@ public class ReduceUI : MonoBehaviour
         resultsBad.SetActive(true);
         nextReuse.SetActive(false);
     }
-    public void GoReuse()
+    public void GoVideo()
     {
         int completion = databaseManager.GetComponent<RealtimeDbManager>().completion;
         if (completion <= 1)
@@ -91,11 +92,14 @@ public class ReduceUI : MonoBehaviour
             databaseManager.GetComponent<RealtimeDbManager>().completion = 2;
         };
         databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
-        SceneManager.LoadScene("Reuse");
+        SceneManager.LoadScene("360Video");
     }
 
-    public void ChangeControls()
+    public void Raycast()
     {
+        previousControl.Clear();
+        StoreControl();
+
         if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
         {
             rayControl[0].SetActive(true);
@@ -103,12 +107,51 @@ public class ReduceUI : MonoBehaviour
             directControl[0].SetActive(false);
             directControl[1].SetActive(false);
         }
-        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+    }
+
+    public void Direct()
+    {
+        previousControl.Clear();
+        StoreControl();
+
+        if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
         {
             rayControl[0].SetActive(false);
             rayControl[1].SetActive(false);
             directControl[0].SetActive(true);
             directControl[1].SetActive(true);
+        }
+    }
+
+    public void StoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            previousControl.Add(directControl[0]);
+            previousControl.Add(directControl[1]);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            previousControl.Add(rayControl[0]);
+            previousControl.Add(rayControl[1]);
+        }
+    }
+
+    public void RetoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
         }
     }
 }

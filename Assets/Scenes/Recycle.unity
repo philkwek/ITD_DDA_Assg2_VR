@@ -3190,6 +3190,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1681181014}
+        m_TargetAssemblyTypeName: RecycleGame, Assembly-CSharp
+        m_MethodName: CloseGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &271022775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3480,6 +3492,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1293037542}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1681181014}
+        m_TargetAssemblyTypeName: RecycleGame, Assembly-CSharp
+        m_MethodName: CloseGameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15735,7 +15759,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1681181014}
         m_TargetAssemblyTypeName: RecycleGame, Assembly-CSharp
-        m_MethodName: ChangeControls
+        m_MethodName: Direct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16120,6 +16144,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1293037542}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1681181014}
+        m_TargetAssemblyTypeName: RecycleGame, Assembly-CSharp
+        m_MethodName: Raycast
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17979,6 +18015,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1681181014}
+        m_TargetAssemblyTypeName: RecycleGame, Assembly-CSharp
+        m_MethodName: RetoreControl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1677520215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18065,6 +18113,7 @@ MonoBehaviour:
   rayControl:
   - {fileID: 66461220}
   - {fileID: 509271726}
+  previousControl: []
   gameOver: {fileID: 2031751402}
   intructions: {fileID: 1040398514}
   gameItems: {fileID: 880598591}
@@ -18126,7 +18175,6 @@ MonoBehaviour:
   pauseBtn: {fileID: 1452336368}
   finishUI: {fileID: 4028596}
   databaseManager: {fileID: 0}
-  GameManager: {fileID: 1681181014}
 --- !u!1001 &1682876089
 PrefabInstance:
   m_ObjectHideFlags: 0
