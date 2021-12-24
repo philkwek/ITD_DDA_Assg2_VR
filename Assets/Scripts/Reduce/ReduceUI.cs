@@ -92,7 +92,7 @@ public class ReduceUI : MonoBehaviour
             databaseManager.GetComponent<RealtimeDbManager>().completion = 2;
         };
         databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
-        SceneManager.LoadScene("360Video");
+        SceneManager.LoadScene("3DVideo");
     }
 
     public void Raycast()
