@@ -2076,3 +2076,27 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7242.328412 seconds.
+  path: Assets/Scripts/Recycle/RecycleInstruction.cs
+  artifactKey: Guid(1a4b52edd709ac5498a77de98cd5e370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Recycle/RecycleInstruction.cs using Guid(1a4b52edd709ac5498a77de98cd5e370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ab61d1234a039aabbbc5d2b30d20d04') in 0.059784 seconds 
+  Import took 0.087631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.651581 seconds.
+  path: Assets/Scripts/Recycle/RecycleGame.cs
+  artifactKey: Guid(1ac03900f9277a740b9e1111a2fb771c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Recycle/RecycleGame.cs using Guid(1ac03900f9277a740b9e1111a2fb771c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb6083b129bb8b2bf696a58744175b6c') in 0.003256 seconds 
+  Import took 0.010443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 112.215631 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(6a31123fd5070524eab056bf8af0b6a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(6a31123fd5070524eab056bf8af0b6a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd985c0c7dd38e6e7e95e34fa6e7fe4') in 0.045598 seconds 
+  Import took 0.079102 seconds .
+
