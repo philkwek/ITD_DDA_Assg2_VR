@@ -15,6 +15,10 @@ GameObject:
   - component: {fileID: -7953439263041914705}
   - component: {fileID: 8957872346568885424}
   - component: {fileID: 88842536221465242}
+  - component: {fileID: -7218479262917567608}
+  - component: {fileID: -8047230434696991354}
+  - component: {fileID: -2653761508608225157}
+  - component: {fileID: -3972536542972769328}
   m_Layer: 6
   m_Name: Plastic Spoon
   m_TagString: NonRecyclable
@@ -242,3 +246,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   databaseManager: {fileID: 0}
+--- !u!114 &-7218479262917567608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663839192322952972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8047230434696991354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663839192322952972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2653761508608225157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663839192322952972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3972536542972769328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663839192322952972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

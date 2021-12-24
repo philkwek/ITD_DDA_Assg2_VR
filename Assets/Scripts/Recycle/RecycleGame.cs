@@ -17,6 +17,9 @@ public class RecycleGame : MonoBehaviour
     public static bool isGameActive = false;
     public static bool isOne = false;
 
+    public List<GameObject> directControl;
+    public List<GameObject> rayControl;
+
     public GameObject gameOver;
     public GameObject intructions;
     public GameObject gameItems;
@@ -87,18 +90,18 @@ public class RecycleGame : MonoBehaviour
     //function runs when game is over
     public void GameOver()
     {
+        ChangeControls();
         isGameActive = false;
-        Time.timeScale = 0;
         gameOver.SetActive(true);
         gameItems.SetActive(false);
         finalScore.text = scoreTxt.text;
-        if (miss == 0)
+        if (score == 0)
         {
             wrong.text = "* No trash have been place into the wrong bins *";
         }
         else
         {
-            wrong.text = string.Format("* {0} trash had been place into the wrong bins *", miss);
+            wrong.text = string.Format("* {0} trash had been place into the wrong bins *", score);
         }
 
         //functions to enter new minigame stats into realtimeDbManager
@@ -158,6 +161,24 @@ public class RecycleGame : MonoBehaviour
         {
             savedStreak = currentStreak;
             currentStreak = 0;
+        }
+    }
+
+    public void ChangeControls()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(true);
+            rayControl[1].SetActive(true);
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            directControl[0].SetActive(true);
+            directControl[1].SetActive(true);
         }
     }
 }
