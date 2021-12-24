@@ -1,5 +1,5 @@
 /******************************************************************************
-Author: Eileen, Kelly, Elicia, Phil, Donavan
+Author: Eileen, Phil, Donavan, Kelly, Elicia
 Name of Class: Tutorial
 Description of Class: This script is for the tutorial scene
 Date Created: 15/12/21
@@ -26,19 +26,22 @@ public class Tutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "BinCollider")
+        //if the player thrown an object to the bin, the door for teleporting will be shown
+        if (other.tag == "BinCollider") 
         {
-            //Do something
+            //the door will be shown, which allow users go to next scene
             door.SetActive(true);
-            throwCongratTxt.SetActive(true);
+            //text to congrat users have thrown successfully will be shown
+            throwCongratTxt.SetActive(true); 
 
             tutorialToggleUI.gameplayInstruction.SetActive(false);
-            Debug.Log("Collide..");
+            Debug.Log("Collide with bin..");
         }
     }
 
     public void OnHover()
     {
+        //if users interact with the door, they will be brought to the next scene
         if (gameObject.tag == "Door")
         {
             //Do something
@@ -47,8 +50,9 @@ public class Tutorial : MonoBehaviour
             {
                 databaseManager.GetComponent<RealtimeDbManager>().completion = 1;
             };
-            Debug.Log("Collide Door..");
-            SceneManager.LoadScene("Reduce");
+            Debug.Log("Interacting with door..");
+            SceneManager.LoadScene("Reduce"); //change scene
+            SceneManager.LoadScene("Reduce"); //change scene
         }
     }
 }

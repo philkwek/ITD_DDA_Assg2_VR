@@ -1,15 +1,23 @@
+/******************************************************************************
+Author: Eileen, Donavan, Phil, Kelly, Elicia
+Name of Class: TutorialToggleUI
+Description of Class: This script is to toggle UIs in tutorial scene
+Date Created: 24/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TutorialToggleUI : MonoBehaviour
 {
+    //UI of instructions
     public GameObject controllerIntro;
     public GameObject intro;
     public GameObject start;
     public GameObject tutorial01;
     public GameObject tutorial02;
 
+    //UI of gameplay
     public GameObject fixTableTxt;
     public GameObject fixBinLidTxt;
     public GameObject attachCongratTxt;
@@ -20,6 +28,7 @@ public class TutorialToggleUI : MonoBehaviour
     public List<GameObject> rayControl;
     public List<GameObject> previousControl;
 
+    //check number of objects have been attached
     public int checker = 0;
 
     public AudioSource doneSound;
@@ -75,6 +84,14 @@ public class TutorialToggleUI : MonoBehaviour
         fixBinLidTxt.SetActive(true);
     }
 
+    public void Tutorial02Next()
+    {
+        tutorial02.SetActive(false);
+
+        gameplayInstruction.SetActive(true);
+        trash.SetActive(true);
+    }
+
     public void Checker()
     {
         //Increases the checker count by 1
@@ -103,14 +120,6 @@ public class TutorialToggleUI : MonoBehaviour
         attachCongratTxt.SetActive(false);
 
         tutorial02.SetActive(true);
-    }
-
-    public void Tutorial02Next()
-    {
-        tutorial02.SetActive(false);
-
-        gameplayInstruction.SetActive(true);
-        trash.SetActive(true);
     }
 
     public void Raycast()
