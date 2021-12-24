@@ -14,10 +14,7 @@ GameObject:
   - component: {fileID: -5262964372180721685}
   - component: {fileID: 5734733199696280394}
   - component: {fileID: -1927753926542617381}
-  - component: {fileID: 3337033790666038889}
-  - component: {fileID: -8521704741820547187}
   - component: {fileID: 7029970631981896999}
-  - component: {fileID: 687452708010444598}
   - component: {fileID: 2872079536985639472}
   m_Layer: 6
   m_Name: Metal Spoon
@@ -233,30 +230,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &3337033790666038889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8240292376971997965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-8521704741820547187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8240292376971997965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7029970631981896999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,18 +243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   databaseManager: {fileID: 0}
---- !u!114 &687452708010444598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8240292376971997965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2872079536985639472
 MonoBehaviour:
   m_ObjectHideFlags: 0
