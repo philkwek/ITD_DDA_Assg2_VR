@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1757031435243161488}
   - component: {fileID: 3864827819517929297}
   - component: {fileID: 6566346523073511719}
+  - component: {fileID: 3195764657722571384}
   m_Layer: 6
   m_Name: Plastic Straw
   m_TagString: NonRecyclable
@@ -242,3 +243,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   databaseManager: {fileID: 0}
+--- !u!114 &3195764657722571384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3299291446794773081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb53e5fe66f736478ba102fa12f921c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
