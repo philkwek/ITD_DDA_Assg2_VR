@@ -168,3 +168,19 @@ Received Import Request.
 Start importing Assets/Music.mixer using Guid(418104a9e37aa40b2a33ea4ad7f01bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f461bf2471b25190e332151e7af7eea3') in 0.122141 seconds 
   Import took 0.126973 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 594.690356 seconds.
+  path: Assets/Scripts/FirebaseScripts
+  artifactKey: Guid(9cb98ce0bd332405a9424c5bc0349ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FirebaseScripts using Guid(9cb98ce0bd332405a9424c5bc0349ba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95117f49f8fb6472ec5c5ddc8dbbfa14') in 0.002777 seconds 
+  Import took 0.019053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.864720 seconds.
+  path: Assets/Scripts/FirebaseScripts/ObjPickUp.cs
+  artifactKey: Guid(d82ce0034f8b84ea89239fcd121c73a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FirebaseScripts/ObjPickUp.cs using Guid(d82ce0034f8b84ea89239fcd121c73a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e51015bc7152da8a9b885b11e64dfa') in 0.119705 seconds 
+  Import took 0.124613 seconds .
+
