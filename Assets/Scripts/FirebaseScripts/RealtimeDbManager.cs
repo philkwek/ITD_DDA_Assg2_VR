@@ -55,8 +55,8 @@ public class RealtimeDbManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("CurrentlyActive", 4);
-        Invoke("GetGameData", 4);
+        Invoke("CurrentlyActive", 1);
+        Invoke("GetGameData", 1);
 
         if (instance != null)
         {
