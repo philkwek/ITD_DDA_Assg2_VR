@@ -1,3 +1,9 @@
+/******************************************************************************
+Author: Donavan, Phil
+Name of Class: TimeManager
+Description of Class: This script manage the Timer in the RecycleGame
+Date Created: 10/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +15,6 @@ using System.Linq;
 public class TimeManager : MonoBehaviour
 {
     public TMP_Text timeRemainingDisplay;
-    //public Button startButton;
     public float time;
 
     public static float timeRemaining = 20;
@@ -19,8 +24,6 @@ public class TimeManager : MonoBehaviour
 
     private float currentSec;
     private float timeLimit = 0;
-
-    public static bool gameEnd = false;
 
     private string resetText = "00:00:00";
 
@@ -33,34 +36,51 @@ public class TimeManager : MonoBehaviour
 
     IEnumerator StopWatch()
     {
+        //Loop the code within the while loop 
         while (true)
         {
+            //If remaining time is more than 0
             if (timeRemaining > 0)
             {
+                //Minus time passed from the remaining time
                 timeRemaining -= Time.deltaTime;
+                //Add time passed to time
                 time += Time.deltaTime;
+                //Calling the DisplayTime function while giving the remaining time as the parameter
                 DisplayTime(timeRemaining);
             }
+            //If remaining time is not more than 0
             else
             {
+                //Time remaining is set to 0
                 timeRemaining = 0;
+
+                //Time is set to the same value that is assigned to timeLimit variable
                 time = timeLimit;
+
+                //Change the font color of the remaining time text to red 
                 timeRemainingDisplay.color = Color.red;
-                //gameEnd = true;
+
+                //Calling the GameOver function from the RecycleGame script
                 GameManager.GameOver();
             }
             yield return null;
         }
     }
 
+    //This function is responsible for displaying time as text
     void DisplayTime(float timeToDisplay)
     {
+        //If time is lesser than 0
         if(timeToDisplay < 0)
         {
+            //Set time to 0
             timeToDisplay = 0;
+
+            //Time is set to the same value that is assigned to timeLimit variable
             time = timeLimit;
+
             //Debug.Log("time limit " + timeLimit);
-            
         }
         float min = Mathf.FloorToInt(timeToDisplay / 60);
         float sec = Mathf.FloorToInt(timeToDisplay % 60);//removes the mins
@@ -75,51 +95,34 @@ public class TimeManager : MonoBehaviour
         currentSec = sec;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     private void Update()
     {
+        //Records the total time the user spent on the RecycleGame
         timeElapsed = Time.timeSinceLevelLoad;
     }
 
     public void StartStopWatch()
     {
-        //startButton.enabled = false;
+        //Start "StopWatch"
         StartCoroutine("StopWatch");
-        gameEnd = false;
     }
 
 
     public void StopStopWatch()
     {
-        //startButton.enabled = true;
+        //Stop "StopWatch"
         StopCoroutine("StopWatch");
-    }
-
-    public void SetTimeRemaining(float newTimeRemaing)
-    {
-        timeRemaining = newTimeRemaing;
-        timeLimit = newTimeRemaing;
-    }
-
-    public float GetTimeRemaining()
-    {
-        return timeRemaining;
-    }
-
-    public float GetCurrentSec()
-    {
-        return currentSec;
     }
 
     public void ResetTimer()
     {
+        //Setting the time remaining to 20
         timeRemaining = 20;
+
+        //Change the font color of the remaining time text to white
         timeRemainingDisplay.color = Color.white;
+
+        //Calling the StartStopWatch function
         StartStopWatch();
     }
 
@@ -129,6 +132,7 @@ public class TimeManager : MonoBehaviour
         recordTimeStart = Time.realtimeSinceStartup;
     }
     //function for use to get recorded time for how long user spent in minigame round at round end
+
     public float GetTimeRecorded()
     {
         //gets time spent in minigame in seconds
