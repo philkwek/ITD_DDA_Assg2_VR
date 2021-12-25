@@ -359,6 +359,60 @@ public class RealtimeDbManager : MonoBehaviour
         });
     }
 
+    public void UploadData()
+    {
+        float timeNow = Time.realtimeSinceStartup;
+        float timeMinute = timeNow / 60;
+        string twoDP = timeMinute.ToString("F2");
+        float finalTime = float.Parse(twoDP, CultureInfo.InvariantCulture.NumberFormat);
+
+        float currentTotalMin;
+        string currentTime = DateTime.Now.ToString("HH:mm:ss");
+        string dateTitle = date + "T" + currentTime;
+
+        //this function updates the totalObjPicked & noOfCrafts made stat for player
+        Query findObjPicked = databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId);
+        findObjPicked.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.Exception != null)
+            {
+                throw task.Exception;
+            }
+
+            if (!task.IsCompleted)
+            {
+                return;
+            }
+
+            DataSnapshot ds = task.Result;
+            if (ds.Exists)
+            {
+                PlayerGameData gameData = JsonUtility.FromJson<PlayerGameData>(ds.GetRawJsonValue());
+                int oldObjPicked = gameData.totalObjPicked;
+                int oldCraftsMade = gameData.noOfCraftsMade;
+
+                int newObjPicked = oldObjPicked + objectsPicked;
+                int newCraftsMade = oldCraftsMade + noOfCraftsMade;
+
+                databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId).Child("totalObjPicked").SetValueAsync(newObjPicked);
+                databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId).Child("noOfCraftsMade").SetValueAsync(newCraftsMade);
+            }
+        });
+
+        //this function updates player's minigame data
+        string minigameAccuracy = minigameAccuracyPercentage + "%";
+        MinigameStats newStats = new MinigameStats(minigameAccuracy, minigameHighscore, minigameLongestRound,
+            minigameThrowStreak, minigameTotalHits, minigameTotalMiss, minigameTotalThrows);
+        string statsJson = JsonUtility.ToJson(newStats);
+        databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId).Child("minigameStats").SetRawJsonValueAsync(statsJson);
+
+        //this functions updates player's profile data
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("completion").SetValueAsync(completion);
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfMinigamesCompleted").SetValueAsync(noOfMinigamesCompleted);
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfTaskCompleted").SetValueAsync(noOfTaskCompleted);
+        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("minigameHighscore").SetValueAsync(minigameHighscore);
+    }
+
     public void GoOffline()
     {
         float timeNow = Time.realtimeSinceStartup;
@@ -446,48 +500,6 @@ public class RealtimeDbManager : MonoBehaviour
                 databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek).Child("currentlyActive").SetValueAsync(currentActiveArray);
             }
         });
-
-        //this function updates the totalObjPicked & noOfCrafts made stat for player
-        Query findObjPicked = databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId);
-        findObjPicked.GetValueAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.Exception != null)
-            {
-                throw task.Exception;
-            }
-
-            if (!task.IsCompleted)
-            {
-                return;
-            }
-
-            DataSnapshot ds = task.Result;
-            if (ds.Exists)
-            {
-                PlayerGameData gameData = JsonUtility.FromJson<PlayerGameData>(ds.GetRawJsonValue());
-                int oldObjPicked = gameData.totalObjPicked;
-                int oldCraftsMade = gameData.noOfCraftsMade;
-
-                int newObjPicked = oldObjPicked + objectsPicked;
-                int newCraftsMade = oldCraftsMade + noOfCraftsMade;
-
-                databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId).Child("totalObjPicked").SetValueAsync(newObjPicked);
-                databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId).Child("noOfCraftsMade").SetValueAsync(newCraftsMade);
-            }
-        });
-
-        //this function updates player's minigame data
-        string minigameAccuracy = minigameAccuracyPercentage + "%";
-        MinigameStats newStats = new MinigameStats(minigameAccuracy, minigameHighscore, minigameLongestRound,
-            minigameThrowStreak, minigameTotalHits, minigameTotalMiss, minigameTotalThrows);
-        string statsJson = JsonUtility.ToJson(newStats);
-        databaseRef.Child("playerGameData").Child(auth.CurrentUser.UserId).Child("minigameStats").SetRawJsonValueAsync(statsJson);
-
-        //this functions updates player's profile data
-        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("completion").SetValueAsync(completion);
-        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfMinigamesCompleted").SetValueAsync(noOfMinigamesCompleted);
-        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("noOfTaskCompleted").SetValueAsync(noOfTaskCompleted);
-        databaseRef.Child("playerProfileData").Child(auth.CurrentUser.UserId).Child("minigameHighscore").SetValueAsync(minigameHighscore);
     }
 
     public void GetNoOnline()
@@ -543,15 +555,15 @@ public class RealtimeDbManager : MonoBehaviour
         noOfMinigamesCompleted += 1;
     }
 
-    public void NewMinigameStats(int highscore, float roundTime, int throwStreak, int totalHit, int totalMiss, int totalThrows)
+    public void NewMinigameStats(int highscore, float roundTime, int throwStreak, int totalHit, int totalMiss, int totalThrows, float tempAccuracy)
     { //function is called when playeer finishes a minigame round, where stats are recorded for saving when game is closing.
-        float tempAccuracy = totalHit / totalThrows * 100;
-
+        float newAccuracy = tempAccuracy * (100 * 1.0f);
+        Debug.Log(newAccuracy + " Accuracy");
         noOfMinigamesCompleted += 1;
 
-        if (tempAccuracy > minigameAccuracyPercentage)
+        if (newAccuracy > minigameAccuracyPercentage)
         {
-            minigameAccuracyPercentage = tempAccuracy;
+            minigameAccuracyPercentage = newAccuracy;
         }
         if (highscore > minigameHighscore)
         {
@@ -567,7 +579,9 @@ public class RealtimeDbManager : MonoBehaviour
         }
         minigameTotalHits += totalHit;
         minigameTotalMiss += totalMiss;
-        minigameTotalThrows += totalMiss;
+        minigameTotalThrows += totalThrows;
+
+        UploadData();
     }
 
     void OnApplicationQuit()

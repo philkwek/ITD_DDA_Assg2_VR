@@ -12,6 +12,12 @@ public class NonRecyclable : MonoBehaviour
     public AudioSource correct;
     public AudioSource wrong;
 
+    void Start()
+    {
+        GameObject obj = GameObject.Find("GameManager");
+        recycleGame = obj.GetComponent<RecycleGame>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "NonRecyclable")

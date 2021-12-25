@@ -93,6 +93,10 @@ public class RecycleGame : MonoBehaviour
     //function runs when game is over
     public void GameOver()
     {
+        Debug.Log("Score: " + score);
+        Debug.Log("Throw" + throws);
+        Debug.Log("Miss" + miss);
+        int throwStreak = savedStreak;
         timeManager.StopStopWatch();
         Raycast();
         isGameActive = false;
@@ -107,16 +111,14 @@ public class RecycleGame : MonoBehaviour
         {
             wrong.text = string.Format("* {0} trash had been place into the wrong bins *", miss);
         }
-
-        //functions to enter new minigame stats into realtimeDbManager
         int completion = databaseManager.GetComponent<RealtimeDbManager>().completion;
         if (completion <= 3)
         { 
             databaseManager.GetComponent<RealtimeDbManager>().completion = 4;
         }
         float roundTime = timeManager.GetTimeRecorded();
-        int throwStreak = savedStreak;
-        databaseManager.GetComponent<RealtimeDbManager>().NewMinigameStats(score, roundTime, throwStreak, score, miss, throws);
+        float tempAccuracy = (float)score/throws;
+        databaseManager.GetComponent<RealtimeDbManager>().NewMinigameStats(score, roundTime, throwStreak, score, miss, throws, tempAccuracy);
         databaseManager.GetComponent<RealtimeDbManager>().noOfMinigamesCompleted += 1;
         databaseManager.GetComponent<RealtimeDbManager>().noOfTaskCompleted += 1;
     }
@@ -162,7 +164,10 @@ public class RecycleGame : MonoBehaviour
             currentStreak += 1;
         } else
         {
-            savedStreak = currentStreak;
+            if (savedStreak < currentStreak)
+            {
+                savedStreak = currentStreak;
+            }
             currentStreak = 0;
         }
     }
