@@ -122,61 +122,91 @@ public class TutorialToggleUI : MonoBehaviour
         tutorial02.SetActive(true);
     }
 
+    //Activating Raycast control
     public void Raycast()
     {
+        //Clear the previousControl list
         previousControl.Clear();
+
+        //Store the current type of controls in the previousControl list
         StoreControl();
 
+        //Check if Direct Control is activated
         if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
         {
+            //Activate Left and Right Raycast controls
             rayControl[0].SetActive(true);
             rayControl[1].SetActive(true);
+
+            //Deactivate Left and Right Direct controls
             directControl[0].SetActive(false);
             directControl[1].SetActive(false);
         }
     }
 
+    //Activating Direct control
     public void Direct()
     {
+        //Clear the previousControl list
         previousControl.Clear();
+
+        //Store the current type of controls in the previousControl list
         StoreControl();
 
+        //Check if Raycast Control is activated
         if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
         {
+            //Deactivate Left and Right Raycast controls
             rayControl[0].SetActive(false);
             rayControl[1].SetActive(false);
+
+            //Activate Left and Right Direct controls
             directControl[0].SetActive(true);
             directControl[1].SetActive(true);
         }
     }
 
+    //Store the current type of controls in the previousControl list
     public void StoreControl()
     {
+        //Check if Direct Control is activated
         if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
         {
+            //Adding Direct Controls in the previousControl list
             previousControl.Add(directControl[0]);
             previousControl.Add(directControl[1]);
         }
+        //Check if Raycast Control is activated
         else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
         {
+            //Adding Raycast Controls in the previousControl list
             previousControl.Add(rayControl[0]);
             previousControl.Add(rayControl[1]);
         }
     }
 
+    //Restore the current type of controls to the controls that was used before this one
     public void RetoreControl()
     {
+        //Check if Direct Control is activated
         if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
         {
+            //Deactivate Left and Right Direct controls
             directControl[0].SetActive(false);
             directControl[1].SetActive(false);
+
+            //Activate previous controls
             previousControl[0].SetActive(true);
             previousControl[1].SetActive(true);
         }
+        //Check if Raycast Control is activated
         else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
         {
+            //Deactivate Left and Right Raycast controls
             rayControl[0].SetActive(false);
             rayControl[1].SetActive(false);
+
+            //Activate previous controls
             previousControl[0].SetActive(true);
             previousControl[1].SetActive(true);
         }

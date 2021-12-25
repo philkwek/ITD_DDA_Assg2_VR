@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{845DA3D7-7D88-02F0-BB49-A3103A293246}</ProjectGuid>
+    <ProjectGuid>{B6D5A9F7-E7B5-0489-69BD-23708457CDAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -329,34 +329,40 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.App">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Database">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.TaskExtension">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Analytics">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Tasks">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
  </Reference>
  <Reference Include="Google.MiniJson">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Platform">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Auth">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -704,112 +710,112 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.Management.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.Interaction.Toolkit">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Subsystem.Registration">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InputSystem">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.MockHMD.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.MockHMD.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.MockHMD.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.CoreUtils.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.CoreUtils.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.CoreUtils.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.MockHMD">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.MockHMD.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.MockHMD.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.CoreUtils">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.CoreUtils.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.CoreUtils.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.Management">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.Oculus.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.Oculus.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.Oculus.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.Oculus">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/Unity.XR.Oculus.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/Unity.XR.Oculus.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{CC365FF1-52CD-13E3-E9E1-0D2BC4152610}</Project>
+      <Project>{EF8A61F0-FC47-E15E-5BF7-B9458EFD3997}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{5F2CC2EF-D246-2993-DF17-A33C5894D1CC}</Project>
+      <Project>{096E67FD-36CD-FF8E-D59C-9DE968562C06}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{4320D9C7-8E55-8A1E-D56F-C0489D6795EA}</Project>
+      <Project>{96C55F5A-4CAE-3E00-B5ED-CF4F05312C7D}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

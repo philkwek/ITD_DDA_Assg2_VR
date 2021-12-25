@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5F2CC2EF-D246-2993-DF17-A33C5894D1CC}</ProjectGuid>
+    <ProjectGuid>{096E67FD-36CD-FF8E-D59C-9DE968562C06}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Boxophobic.SkyboxCubemapExtended.Editor</AssemblyName>
@@ -279,74 +279,80 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
- </Reference>
  <Reference Include="Google.PackageManagerResolver">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/ExternalDependencyManager/Editor/1.2.167/Google.PackageManagerResolver.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/ExternalDependencyManager/Editor/1.2.167/Google.PackageManagerResolver.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.App">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Database">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.TaskExtension">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/ExternalDependencyManager/Editor/1.2.167/Google.IOSResolver.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/ExternalDependencyManager/Editor/1.2.167/Google.IOSResolver.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Editor">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Analytics">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Tasks">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandlerImpl">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/ExternalDependencyManager/Editor/1.2.167/Google.VersionHandlerImpl.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/ExternalDependencyManager/Editor/1.2.167/Google.VersionHandlerImpl.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/ExternalDependencyManager/Editor/1.2.167/Google.JarResolver.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/ExternalDependencyManager/Editor/1.2.167/Google.JarResolver.dll</HintPath>
  </Reference>
  <Reference Include="Google.MiniJson">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Platform">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Auth">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -697,26 +703,26 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/donav/Documents/School Documents/Module Materials/2021/Sem 2/ITD/ITD_Assg2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/User/Desktop/NP/ITD/Asg2/ITD_DDA_Assg2_VR/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{CC365FF1-52CD-13E3-E9E1-0D2BC4152610}</Project>
+      <Project>{EF8A61F0-FC47-E15E-5BF7-B9458EFD3997}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{4320D9C7-8E55-8A1E-D56F-C0489D6795EA}</Project>
+      <Project>{96C55F5A-4CAE-3E00-B5ED-CF4F05312C7D}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
