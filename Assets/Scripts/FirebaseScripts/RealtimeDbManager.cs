@@ -9,6 +9,7 @@ using Firebase.Extensions;
 using System;
 using System.Globalization;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class RealtimeDbManager : MonoBehaviour
 {
@@ -16,8 +17,8 @@ public class RealtimeDbManager : MonoBehaviour
     Firebase.Auth.FirebaseUser user;
     DatabaseReference databaseRef;
 
-    public TextMeshProUGUI accountNameUI;
-    public TextMeshProUGUI onlinePlayersUI;
+    public GameObject accountNameUI;
+    public GameObject onlinePlayersUI;
     public static RealtimeDbManager instance;
 
     public int weekOfYear;
@@ -55,9 +56,6 @@ public class RealtimeDbManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("CurrentlyActive", 1);
-        Invoke("GetGameData", 1);
-
         if (instance != null)
         {
             Destroy(gameObject);
@@ -67,6 +65,34 @@ public class RealtimeDbManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
         InvokeRepeating("GetNoOnline", 2.0f, 10.0f);
+    }
+
+    // called first
+    void OnEnable()
+    {
+        Debug.Log("OnEnable called");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // called second
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        Debug.Log(mode);
+
+        if (scene.name == "MainMenu")
+        {
+            onlinePlayersUI = GameObject.Find("PlayersOnline");
+            accountNameUI = GameObject.Find("AccountName");
+            Invoke("CurrentlyActive", 1);
+            Invoke("GetGameData", 1);
+        }
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("OnDisable");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     // Update is called once per frame
@@ -101,7 +127,7 @@ public class RealtimeDbManager : MonoBehaviour
                 {
                     Player player = JsonUtility.FromJson<Player>(snap.GetRawJsonValue());
                     Debug.Log(player.username);
-                    accountNameUI.text = "Account: " +  player.username;
+                    accountNameUI.GetComponent<TextMeshProUGUI>().text = "Account: " +  player.username;
                 }
             }
             else
@@ -508,7 +534,7 @@ public class RealtimeDbManager : MonoBehaviour
             {
                 Day newDay = JsonUtility.FromJson<Day>(ds.GetRawJsonValue());
                 var noOfOnlinePlayers = newDay.currentlyActive.Length;
-                onlinePlayersUI.text = "Players Online: " + noOfOnlinePlayers;
+                onlinePlayersUI.GetComponent<TextMeshProUGUI>().text = "Players Online: " + noOfOnlinePlayers;
             }
             else
             {
