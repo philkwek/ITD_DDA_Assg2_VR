@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour
     //When user clicks on the Main Menu button, it will direct user back to Main Menu scene
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu",LoadSceneMode.Single);
     }
 
     //When user clicks on the Quit game button, it will log the player out
