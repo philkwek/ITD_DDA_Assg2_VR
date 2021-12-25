@@ -9,6 +9,8 @@ public class MenuManager : MonoBehaviour
     public GameObject homePage;
 
     public RealtimeDbManager dbManager;
+    public AuthManager authManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +21,17 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(dbManager == null)
+        {
+            GameObject db = GameObject.Find("DatabaseManager");
+            dbManager = db.GetComponent<RealtimeDbManager>();
+            dbManager.CurrentlyActive();
+            dbManager.InsertUsername();
+
+            GameObject auth = GameObject.Find("DatabaseManager");
+            authManager = auth.GetComponent<AuthManager>();
+            authManager.GetMenu();
+        }
     }
 
     public void QuitGame()

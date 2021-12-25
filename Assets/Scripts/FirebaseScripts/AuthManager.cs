@@ -28,9 +28,12 @@ public class AuthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (auth.CurrentUser != user)
+        if (auth.CurrentUser != null)
         {
+            Debug.Log("New instance");
             Debug.Log("User is signed in");
+            GameObject menuObj = GameObject.Find("Menus");
+            menuManager = menuObj.GetComponent<MenuManager>();
             AlreadySignIn();
         }
     }
@@ -45,6 +48,14 @@ public class AuthManager : MonoBehaviour
     {
         menuManager.OpenHomeMenu(); // opens home menu
         realtimedbManager.InsertUsername();
+        realtimedbManager.CurrentlyActive();
+        realtimedbManager.GetGameData();
+    }
+
+    public void GetMenu()
+    {
+        GameObject menuObj = GameObject.Find("Menus");
+        menuManager = menuObj.GetComponent<MenuManager>();
     }
 
     public void SignUpNewUser(string email, string password, string username)

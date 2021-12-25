@@ -56,6 +56,7 @@ public class RealtimeDbManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         if (instance != null)
         {
             Destroy(gameObject);
@@ -67,34 +68,6 @@ public class RealtimeDbManager : MonoBehaviour
         InvokeRepeating("GetNoOnline", 2.0f, 10.0f);
     }
 
-    // called first
-    void OnEnable()
-    {
-        Debug.Log("OnEnable called");
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    // called second
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log(mode);
-
-        if (scene.name == "MainMenu")
-        {
-            onlinePlayersUI = GameObject.Find("PlayersOnline");
-            accountNameUI = GameObject.Find("AccountName");
-            Invoke("CurrentlyActive", 1);
-            Invoke("GetGameData", 1);
-        }
-    }
-
-    void OnDisable()
-    {
-        Debug.Log("OnDisable");
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -103,6 +76,7 @@ public class RealtimeDbManager : MonoBehaviour
 
     public void InsertUsername()
     {
+        accountNameUI = GameObject.Find("AccountName");
         //Changes username in player child
         Query searchPlayer = databaseRef.Child("players").OrderByChild("userID").EqualTo(auth.CurrentUser.UserId).LimitToFirst(1);
 
@@ -166,6 +140,8 @@ public class RealtimeDbManager : MonoBehaviour
     //function adds user to realtimedb list of currently online users, runs once on startup
     public void CurrentlyActive()
     {
+        Debug.Log("Getting currently active");
+
         CultureInfo myCI = new CultureInfo("en-US");
         Calendar myCal = myCI.Calendar;
 
@@ -196,6 +172,7 @@ public class RealtimeDbManager : MonoBehaviour
             DataSnapshot ds = task.Result;
             if (ds.Exists)
             {
+                onlinePlayersUI = GameObject.Find("PlayersOnline");
                 string[] dayArray = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
                 Weekly weekly = JsonUtility.FromJson<Weekly>(ds.GetRawJsonValue());
                 Debug.Log(weekly.weekNumber);
@@ -515,6 +492,9 @@ public class RealtimeDbManager : MonoBehaviour
 
     public void GetNoOnline()
     {
+        DateTime dt = System.DateTime.Now;
+        dayOfWeek = dt.DayOfWeek.ToString();
+        Debug.Log(dayOfWeek);
         Query searchOnline = databaseRef.Child("weeklyActive").Child("week" + weekOfYear).Child(dayOfWeek);
         searchOnline.GetValueAsync().ContinueWithOnMainThread(task =>
         {
@@ -592,6 +572,7 @@ public class RealtimeDbManager : MonoBehaviour
 
     void OnApplicationQuit()
     {
+        Debug.Log("quitting");
         GoOffline();
     }
 

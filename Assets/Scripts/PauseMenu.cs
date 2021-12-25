@@ -44,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     //When user clicks on the Main Menu button, it will direct user back to Main Menu scene
     public void MainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu",LoadSceneMode.Single);
     }
 
