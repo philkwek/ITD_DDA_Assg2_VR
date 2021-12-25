@@ -55,8 +55,8 @@ public class ReuseAccomplished : MonoBehaviour
         if (checker >= 4)
         {
             //Change UI if all the elements have been hung on the tree
-            EndReuseScene();
             Raycast();
+            EndReuseScene();
             Debug.Log("DONE!!");
         }
         else
