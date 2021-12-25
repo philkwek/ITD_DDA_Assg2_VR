@@ -16,6 +16,10 @@ public class ReuseAccomplished : MonoBehaviour
 
     public GameObject databaseManager;
 
+    public List<GameObject> directControl;
+    public List<GameObject> rayControl;
+    public List<GameObject> previousControl;
+
     private void Start()
     {
         //Finds GameManager under DontDestroyOnLoad()
@@ -52,6 +56,7 @@ public class ReuseAccomplished : MonoBehaviour
         {
             //Change UI if all the elements have been hung on the tree
             EndReuseScene();
+            Raycast();
             Debug.Log("DONE!!");
         }
         else
@@ -60,4 +65,63 @@ public class ReuseAccomplished : MonoBehaviour
         }
     }
 
+    public void Raycast()
+    {
+        previousControl.Clear();
+        StoreControl();
+
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(true);
+            rayControl[1].SetActive(true);
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+        }
+    }
+
+    public void Direct()
+    {
+        previousControl.Clear();
+        StoreControl();
+
+        if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            directControl[0].SetActive(true);
+            directControl[1].SetActive(true);
+        }
+    }
+
+    public void StoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            previousControl.Add(directControl[0]);
+            previousControl.Add(directControl[1]);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            previousControl.Add(rayControl[0]);
+            previousControl.Add(rayControl[1]);
+        }
+    }
+
+    public void RetoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
+        }
+    }
 }

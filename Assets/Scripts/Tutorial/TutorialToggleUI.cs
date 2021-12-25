@@ -1,21 +1,34 @@
+/******************************************************************************
+Author: Eileen, Donavan, Phil, Kelly, Elicia
+Name of Class: TutorialToggleUI
+Description of Class: This script is to toggle UIs in tutorial scene
+Date Created: 24/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TutorialToggleUI : MonoBehaviour
 {
+    //UI of instructions
     public GameObject controllerIntro;
     public GameObject intro;
     public GameObject start;
     public GameObject tutorial01;
     public GameObject tutorial02;
 
+    //UI of gameplay
     public GameObject fixTableTxt;
     public GameObject fixBinLidTxt;
     public GameObject attachCongratTxt;
     public GameObject trash;
     public GameObject gameplayInstruction;
 
+    public List<GameObject> directControl;
+    public List<GameObject> rayControl;
+    public List<GameObject> previousControl;
+
+    //check number of objects have been attached
     public int checker = 0;
 
     public AudioSource doneSound;
@@ -71,6 +84,14 @@ public class TutorialToggleUI : MonoBehaviour
         fixBinLidTxt.SetActive(true);
     }
 
+    public void Tutorial02Next()
+    {
+        tutorial02.SetActive(false);
+
+        gameplayInstruction.SetActive(true);
+        trash.SetActive(true);
+    }
+
     public void Checker()
     {
         //Increases the checker count by 1
@@ -84,6 +105,7 @@ public class TutorialToggleUI : MonoBehaviour
             fixBinLidTxt.SetActive(false);
 
             attachCongratTxt.SetActive(true);
+            Raycast();
             //doneSound.Play();
             Debug.Log("DONE!!");
         }
@@ -100,11 +122,63 @@ public class TutorialToggleUI : MonoBehaviour
         tutorial02.SetActive(true);
     }
 
-    public void Tutorial02Next()
+    public void Raycast()
     {
-        tutorial02.SetActive(false);
+        previousControl.Clear();
+        StoreControl();
 
-        gameplayInstruction.SetActive(true);
-        trash.SetActive(true);
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(true);
+            rayControl[1].SetActive(true);
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+        }
+    }
+
+    public void Direct()
+    {
+        previousControl.Clear();
+        StoreControl();
+
+        if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            directControl[0].SetActive(true);
+            directControl[1].SetActive(true);
+        }
+    }
+
+    public void StoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            previousControl.Add(directControl[0]);
+            previousControl.Add(directControl[1]);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            previousControl.Add(rayControl[0]);
+            previousControl.Add(rayControl[1]);
+        }
+    }
+
+    public void RetoreControl()
+    {
+        if (directControl[0].activeSelf == true && directControl[1].activeSelf == true)
+        {
+            directControl[0].SetActive(false);
+            directControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
+        }
+        else if (rayControl[0].activeSelf == true && rayControl[1].activeSelf == true)
+        {
+            rayControl[0].SetActive(false);
+            rayControl[1].SetActive(false);
+            previousControl[0].SetActive(true);
+            previousControl[1].SetActive(true);
+        }
     }
 }
