@@ -24338,8 +24338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771e230833d4f4f3b9011f3475752e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accountNameUI: {fileID: 438936277}
-  onlinePlayersUI: {fileID: 479932067}
+  accountNameUI: {fileID: 438936275}
+  onlinePlayersUI: {fileID: 479932065}
   weekOfYear: 0
   dayOfWeek: 
   date: 
