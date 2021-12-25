@@ -1,3 +1,9 @@
+/******************************************************************************
+Author: Donavan, Phil, Eileen, Kelly, Elicia
+Name of Class: TutorialDrop
+Description of Class: 
+Date Created: 24/12/21
+******************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

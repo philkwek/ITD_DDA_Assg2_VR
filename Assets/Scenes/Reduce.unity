@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18572965, g: 0.38303757, b: 0.8573545, a: 1}
+  m_IndirectSpecularColor: {r: 0.18575867, g: 0.38305223, b: 0.85734975, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2235,7 +2235,7 @@ AudioSource:
   m_GameObject: {fileID: 183270588}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9bdc0c827597a4cd584125179fd19bf3, type: 2}
   m_audioClip: {fileID: 8300000, guid: b1254d7975d28554b99d1a3309d64a54, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -8211,7 +8211,7 @@ GameObject:
   - component: {fileID: 938507504}
   - component: {fileID: 938507503}
   m_Layer: 0
-  m_Name: BgmAudio Source
+  m_Name: MusicAudio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8226,7 +8226,7 @@ AudioSource:
   m_GameObject: {fileID: 938507502}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 418104a9e37aa40b2a33ea4ad7f01bb0, type: 2}
   m_audioClip: {fileID: 8300000, guid: 590a5ad6386b47e40a546fd2fec45f74, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -8325,7 +8325,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &946166369
 GameObject:
@@ -12051,7 +12051,7 @@ AudioSource:
   m_GameObject: {fileID: 1403186411}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9bdc0c827597a4cd584125179fd19bf3, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6318bceb6a1897d47a39f2b6a1f29724, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -14138,7 +14138,7 @@ AudioSource:
   m_GameObject: {fileID: 1676291706}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9bdc0c827597a4cd584125179fd19bf3, type: 2}
   m_audioClip: {fileID: 8300000, guid: b47d815d619bde54e8c5f56e0a132866, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -14237,7 +14237,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1682876089
 PrefabInstance:

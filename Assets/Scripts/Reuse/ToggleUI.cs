@@ -53,11 +53,13 @@ public class ToggleUI : MonoBehaviour
         endReuseScene.SetActive(true);
     }
 
+    //Go to Recycle button shown
     public void ToRecycle()
     {
         SceneManager.LoadScene("Recycle");
     }
 
+    //Go to Reuse button shown
     public void ChangeToRecycleScene()
     {
         SceneManager.LoadScene("Recycle");
