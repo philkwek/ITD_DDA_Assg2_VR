@@ -125,6 +125,8 @@ public class AuthManager : MonoBehaviour
                 Debug.Log("User logged in Succesfully!");
                 menuManager.OpenHomeMenu(); // opens home menu
                 realtimedbManager.InsertUsername();
+                realtimedbManager.CurrentlyActive();
+                realtimedbManager.GetGameData();
             }
 
         });
