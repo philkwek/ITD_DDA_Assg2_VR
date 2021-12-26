@@ -1866,14 +1866,6 @@ MonoBehaviour:
         m_Groups: 
         m_Action: Position
         m_Flags: 0
-      - m_Name: 
-        m_Id: 9a73b5de-daca-4089-ae7d-a60ca781ce90
-        m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_RotationInput:
@@ -1897,14 +1889,6 @@ MonoBehaviour:
       - m_Name: 
         m_Id: fe60ac3a-f921-46d1-a4fa-1958a8de473d
         m_Path: <XRInputV1::Oculus::OculusQuest>/devicerotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Rotation
-        m_Flags: 0
-      - m_Name: 
-        m_Id: f0ad2eb8-4db9-43e9-8b88-a401e7920142
-        m_Path: <XRHMD>/centerEyeRotation
         m_Interactions: 
         m_Processors: 
         m_Groups: 
