@@ -1,5 +1,5 @@
 /******************************************************************************
-Author: Donavan
+Author: Donavan, Eileen, Phil, Kelly, Elicia
 Name of Class: SelfDestruct
 Description of Class: This script makes sure that all object that are spawned 
 are destroy when the game ends

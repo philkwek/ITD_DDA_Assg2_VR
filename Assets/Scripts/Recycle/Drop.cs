@@ -1,5 +1,5 @@
 /******************************************************************************
-Author: Donavan
+Author: Donavan, Eileen, Phil, Kelly, Elicia
 Name of Class: Drop
 Description of Class: This script destroys trash that are dropped and spawn a
 new one

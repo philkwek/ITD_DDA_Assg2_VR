@@ -1,5 +1,5 @@
 /******************************************************************************
-Author: Donavan, Phil
+Author: Donavan, Eileen, Phil, Kelly, Elicia
 Name of Class: TimeManager
 Description of Class: This script manage the Timer in the RecycleGame
 Date Created: 10/12/21

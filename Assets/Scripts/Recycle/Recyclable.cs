@@ -1,5 +1,5 @@
 /******************************************************************************
-Author: Donavan
+Author: Donavan, Eileen, Phil, Kelly, Elicia
 Name of Class: Recyclable
 Description of Class: This script checks what comes in the recyclable bin
 Date Created: 10/12/21

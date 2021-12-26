@@ -1,5 +1,5 @@
 /******************************************************************************
-Author: Donovan, Phil, Elicia, Eileen, Kelly
+Author: Donavan, Phil, Elicia, Eileen, Kelly
 Name of Class: Interactable Highlight
 Description of Class: This script is for interacting with objects, would highlight it with colors
 Date Created: 3/12/21

@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\FirebaseScripts\Obj\WeeklyActive.cs" />
     <Compile Include="Assets\Scripts\Recycle\TimeManager.cs" />
     <Compile Include="Assets\Scripts\Tutorial\TutorialDrop.cs" />
+    <Compile Include="Assets\Scripts\Reduce\ReduceDrop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppApp-8_5_0.dll" />

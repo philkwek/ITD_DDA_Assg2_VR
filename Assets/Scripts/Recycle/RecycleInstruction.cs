@@ -1,5 +1,5 @@
 /******************************************************************************
-Author: Donavan
+Author: Donavan, Eileen, Phil, Kelly, Elicia
 Name of Class: RecycleInstruction
 Description of Class: This script manages navigation of the instructions that
 the users read before starting the game
